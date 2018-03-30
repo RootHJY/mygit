@@ -19,7 +19,7 @@
         },
         created () { 
             var _this = this
-            var recomdUrl = "/wechatecom/appserver/product/recommendForYou.do?name="
+            var recomdUrl = "/api/product/recommendForYou.do?name="
             this.ajaxDataFun('post',recomdUrl,function(obj){
                 _this.dataList = obj.data;
             })

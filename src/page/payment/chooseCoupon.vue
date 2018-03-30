@@ -73,7 +73,7 @@
                     _this.endListen = false
  
                 var locaStr = window.location.href
-                var url = "/wechatecom/appserver/coupon/availableList.do?promotionId=" + this.promotionId + "&promotionType=" + this.promotionType + "&items=" + this.orderItems
+                var url = "/api/coupon/availableList.do?promotionId=" + this.promotionId + "&promotionType=" + this.promotionType + "&items=" + this.orderItems
 
                 this.ajaxDataFun('post',url,function(obj){
                     if(obj.code == '200'){

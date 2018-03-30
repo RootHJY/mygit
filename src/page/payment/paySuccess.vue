@@ -73,9 +73,9 @@
                 }
 
                 if(_locaUrl.indexOf('isWechat=') > -1){
-                    _tradeUrl = "/wechatecom/appserver/paymentQuery/wxpayTradeQuery.do?tradeNo=" + this.tradeNo
+                    _tradeUrl = "/api/paymentQuery/wxpayTradeQuery.do?tradeNo=" + this.tradeNo
                 }else{
-                    _tradeUrl = "/wechatecom/appserver/paymentQuery/alipayTradeQuery.do?tradeNo=" + this.tradeNo
+                    _tradeUrl = "/api/paymentQuery/alipayTradeQuery.do?tradeNo=" + this.tradeNo
                 }
 
                 this.ajaxDataFun('post',_tradeUrl,function(obj){

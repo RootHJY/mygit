@@ -85,7 +85,7 @@
         methods: { 
             getAllData:function(val){  // 获取单个详细参数
                 var _this = this
-                var detailsUrl = "/wechatecom/appserver/product/details.do?productId=" + _this.pId
+                var detailsUrl = "/api/product/details.do?productId=" + _this.pId
                     + "&specVals=" + val
 
                 this.ajaxDataFun('post',detailsUrl,function(obj){

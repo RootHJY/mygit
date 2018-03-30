@@ -11,6 +11,7 @@ import token from '@/components/token'
 import common from '@/components/common'
 import wx from 'weixin-js-sdk';
 
+require('./mock/mock.js')
 Vue.use(mintUI);
 
 Vue.config.productionTip = false
@@ -113,8 +114,8 @@ new Vue({
 	template: '<App/>',
 	components: { App },
 	created () {
-		this.weChatLogin()  //微信登录 函数内判断
-	    this.hotTxtInit()  //随机搜素热词
+		// this.weChatLogin()  //微信登录 函数内判断s
+	    // this.hotTxtInit()  //随机搜素热词
 		this.getMcartNum()  //刷新页面的时候重新获取 
     },
 	methods:{
@@ -203,9 +204,10 @@ new Vue({
 			}else{
 				localStorage.removeItem('cartNum')  
 			    var _this = this
-			    var numUrl = "/wechatecom/appserver/cart/getCartSkuCount.do"
+			    var numUrl = "/api/cart/getCartSkuCount.do"
 			    this.ajaxDataFun('post',numUrl,function(obj){
-			        if(obj.code == '200'){
+			    	console.log(obj)
+			        if(obj.data.code == '200'){
 			            _this.$store.state.cartNum = obj.data.count
 			            localStorage.setItem('cartNum', obj.data.count)
 			        }

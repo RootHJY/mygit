@@ -219,7 +219,7 @@
         methods: { 
             getPeople:function(){
                 var _this = this
-                var avarUrl = "/wechatecom/appserver/order/ptDetail.do?ptCreateId=" + this.tid
+                var avarUrl = "/api/order/ptDetail.do?ptCreateId=" + this.tid
                 this.ajaxDataFun('post',avarUrl,function(obj){
                     if(obj.code == '200'){
                         _this.showAllDiv = true
@@ -235,7 +235,7 @@
             },
             getDetaisl:function(val){
                 var _this = this;
-                var _detailsUrl = "/wechatecom/appserver/product/details.do?productId=" + this.pid + "&specVals=" + val
+                var _detailsUrl = "/api/product/details.do?productId=" + this.pid + "&specVals=" + val
                 this.ajaxDataFun('post',_detailsUrl,function(obj){
                     if(obj.code == '200'){
                         var _data = obj.data

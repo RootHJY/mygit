@@ -22,7 +22,7 @@
         created () { 
             // 首页四个分类接口
             var _this = this
-            var recomdUrl = "/wechatecom/appserver/group/getGroupList"
+            var recomdUrl = "/api/group/getGroupList"
             this.ajaxDataFun('post',recomdUrl,function(obj){
                 _this.categoryData = obj.data;
                 console.log(_this.categoryData )

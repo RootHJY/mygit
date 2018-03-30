@@ -79,7 +79,7 @@
             getListF:function(scroll){
                 var _this = this
                      _this.endListen = false
-                var charUrl = "/wechatecom/appserver/consult/list.do?currentPage=" + this.currentPage + "&pageSize=" + this.pageSize
+                var charUrl = "/api/consult/list.do?currentPage=" + this.currentPage + "&pageSize=" + this.pageSize
                 this.ajaxDataFun('post',charUrl,function(obj){
                     var objLen = obj.data.length;
                     if(scroll){

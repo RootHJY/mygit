@@ -144,7 +144,7 @@
                 console.log("出发2222")
                 var _this = this
                 this.isLogin = 'true'
-                var getInfoUrl = "/wechatecom/appserver/center/userInfo"
+                var getInfoUrl = "/api/center/userInfo"
                 this.ajaxDataFun('post',getInfoUrl,function(obj){
                     if(obj.code == '200'){
                         var _data = obj.data

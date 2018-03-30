@@ -1,2 +1,0 @@
-webpackJsonp([31],{"/QCv":function(e,t,n){"use strict";t.a={data:function(){return{pageTitle:"退款公共模块",showLogin:!0}},components:{},created:function(){},methods:{}}},xRT0:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n("/QCv"),u=n("xq6b"),a=n("mPyB"),c=a(r.a,u.a,!1,null,null,null);t.default=c.exports},xq6b:function(e,t,n){"use strict";var r=function(){var e=this,t=e.$createElement;return(e._self._c||t)("router-view")},u=[],a={render:r,staticRenderFns:u};t.a=a}});
-//# sourceMappingURL=31.3c6362fc70dc1c0f4090.js.map

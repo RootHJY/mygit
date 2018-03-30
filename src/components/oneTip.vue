@@ -25,7 +25,7 @@
         created () {
             var isShow = localStorage.getItem('isComeIn') 
             if(isShow != 'true'){
-                this.getPopInfo()
+                // this.getPopInfo()
             }
         },
         methods: {

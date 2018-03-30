@@ -7,7 +7,7 @@
             <div class="tagList">
                 <ul class="clearfix">
                     <li  :class="{active:parIndex == 0}" @click="filterShopF(' ',0)">全部商品</li>
-                    <li v-for="(item,index) in catagory" :class="{active:parIndex == index + 1}" @click="filterShopF(item.id,index + 1)">{{ item.name }}</li>
+                    <li v-for="(item,index) in catagory" :class="{active:parIndex == index + 1}" @click="filterShopF(item.id,index + 1)">{{ item }}</li>
                 </ul>
             </div>
             <div class="filterWrap">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="tagContent" v-for="(item,index) in catagory" v-show="(index+1) == parIndex">
                     <div class="tagArea">
-                        <div class="name" @click="showSortChildF()" :class="{active:isShowSortChild && (index+1)  == parIndex}" v-if="item.childGroupList.length != ''"> 
+                        <div class="name" @click="showSortChildF()" :class="{active:isShowSortChild && (index+1)  == parIndex}" v-if="item.childGroupList"> 
                             {{ filterName[(parIndex-1)] }}
                         </div>
                         <div class="name" @click="showSortPriceF()" :class="{active:isShowSortPrice && (index+1) == parIndex}"> 
@@ -122,15 +122,17 @@
             var vm = this;
             this.colNum = localStorage.getItem('colNum') || '2'
             this.getCategory()
-            this.getShopList()
-            this.getImgList(this.$store.state.catagoryId)
+            // this.getShopList()
+            // this.getImgList(this.$store.state.catagoryId)
         },
         methods: { 
             getCategory:function(){
                 var _this = this
-                var cataUrl = "/wechatecom/appserver/group/groupList.do"
+                var cataUrl = "/api/groupList"
                 this.ajaxDataFun('post',cataUrl,function(obj){
-                    if(obj.code == '200'){
+                    console.log("111");
+                    _this.catagory = obj.data;
+          /*          if(obj.code == '200'){
                         _this.catagory = obj.data
                         var catLen = obj.data.length
                         if(catLen){
@@ -142,12 +144,12 @@
                                 }
                             }
                         }
-                    }
+                    }*/
                 })
             },
             getImgList:function(){
                 var _this = this
-                var slideUrl = "/wechatecom/appserver/ad/findAdByGroup.do?groupId=" + this.groupId
+                var slideUrl = "/api/ad/findAdByGroup.do"
                 this.ajaxDataFun('post',slideUrl,function(obj){
                     if(obj.code == '200'){
                         _this.swipeList = obj.data
@@ -192,7 +194,7 @@
             getShopList:function(scroll){
                 var _this = this
                     _this.endListen = false
-                var listUrl = "/wechatecom/appserver/group/groupSearch.do?groupId=" + this.groupId + "&sortType=" + this.sortType + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize
+                var listUrl = "/api/group/groupSearch.do"
 
                 this.ajaxDataFun('post',listUrl,function(obj){
                     if(obj.code == '200'){

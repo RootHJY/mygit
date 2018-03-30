@@ -84,7 +84,7 @@
                     _this.endListen = false
 
                 var locaStr = window.location.href
-                var url = "/wechatecom/appserver/coupon/list.do?currentPage=" + _this.currentPage + "&pageSize=" + _this.pageSize + "&selectHis=" + _this.selectHis
+                var url = "/api/coupon/list.do?currentPage=" + _this.currentPage + "&pageSize=" + _this.pageSize + "&selectHis=" + _this.selectHis
 
        
                 this.ajaxDataFun('post',url,function(obj){

@@ -46,7 +46,7 @@
             },
             sendF:function(){
                 var _this = this
-                var sendUrl = "/wechatecom/appserver/consult/add.do?content=" + _this.content + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize
+                var sendUrl = "/api/consult/add.do?content=" + _this.content + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize
                 if(_this.content.trim() != ''){
                     _this.sendTxt = '发布中'
                     this.ajaxDataFun('post',sendUrl,function(obj){

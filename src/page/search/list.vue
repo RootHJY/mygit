@@ -103,7 +103,7 @@
             getShopList:function(scroll,search){
                 var _this = this
                     _this.endListen = false
-                var  _listUrl = "/wechatecom/appserver/product/search.do?promotionId=" + this.promotionId + "&promotionType=" + this.promotionType + "&sortType=" + this.sortType + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize + "&couponId=" + this.couponId
+                var  _listUrl = "/api/product/search.do?promotionId=" + this.promotionId + "&promotionType=" + this.promotionType + "&sortType=" + this.sortType + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize + "&couponId=" + this.couponId
                 
                 this.ajaxDataFun('post',_listUrl,function(obj){
                     if(obj.code == '200'){

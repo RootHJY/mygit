@@ -99,7 +99,7 @@
             },
             getAddListF:function(v){
                 var _this = this
-                var ListUrl = "/wechatecom/appserver/member/receiver/list.do?currentPage=" + this.currentPage +" &pageSize=" + this.pageSize
+                var ListUrl = "/api/member/receiver/list.do?currentPage=" + this.currentPage +" &pageSize=" + this.pageSize
                     _this.endListen = false
                 this.ajaxDataFun('post',ListUrl,function(obj){
                     if(obj.code == '200'){
@@ -132,7 +132,7 @@
             },
             deleteAddF:function(id){
                 var _this = this
-                var delUrl = "/wechatecom/appserver/member/receiver/del.do?id=" + this.deleteId
+                var delUrl = "/api/member/receiver/del.do?id=" + this.deleteId
                 console.log(this.deleteIndex)
 
                 this.ajaxDataFun('post',delUrl,function(obj){

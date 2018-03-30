@@ -173,7 +173,7 @@
             },
             getRecomd:function(){
                 var _this = this;
-                var searchUrl = "/wechatecom/appserver/product/recommendForYou.do?name=" + _this.searchVal;
+                var searchUrl = "/api/product/recommendForYou.do?name=" + _this.searchVal;
                 this.ajaxDataFun('post',searchUrl,function(obj){
                     console.log("请求为您推荐")
                     if(obj.code == '200'){
@@ -191,7 +191,7 @@
                 var _this = this;
                     _this.endListen = false
 
-                var searchUrl = "/wechatecom/appserver/product/search.do?name=" + val + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize + "&sortType=" + sort;
+                var searchUrl = "/api/product/search.do?name=" + val + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize + "&sortType=" + sort;
                 this.ajaxDataFun('post',searchUrl,function(obj){
                     if(obj.code == '200'){
                         var objLen = obj.data.length;

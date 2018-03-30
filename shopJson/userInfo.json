@@ -1,1 +1,39 @@
-{"msg":"操作成功!","code":"200","data":{"appUser":{"id":"229873","remarks":"","createDate":1493807144000,"updateDate":"","username":"18701872617","password":"e10adc3949ba59abbe56e057f20f883e","modifyDate":"2017-12-25 16:39:05","image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171226/97e0b125-89c7-4c61-af88-b37a07a27874","nickName":"加盐","type":"0","lastLoginTime":"2018-01-31 16:09:57","loginType":"1","gag":"0","point":"","career":"","birthday":"2015-11-30 00:00:00","sex":"0","currentScore":"3","totalScore":"3","lastReadTime":"2018-01-16 17:14:31","lastNotifyTime":"","receiverCnt":"","cartItemCnt":"","openId":"","relationPhone":"","isMember":"0","isUnReadConsult":"1","lineUserName":"加盐"},"unPaidCount":0,"paidCount":0,"receiverCount":0}}
+{
+  "msg": "操作成功!",
+  "code": "200",
+  "data": {
+    "appUser": {
+      "id": "229873",
+      "remarks": "",
+      "createDate": 1493807144000,
+      "updateDate": "",
+      "username": "18701872617",
+      "password": "e10adc3949ba59abbe56e057f20f883e",
+      "modifyDate": "2017-12-25 16:39:05",
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171226/97e0b125-89c7-4c61-af88-b37a07a27874",
+      "nickName": "加盐",
+      "type": "0",
+      "lastLoginTime": "2018-01-31 16:09:57",
+      "loginType": "1",
+      "gag": "0",
+      "point": "",
+      "career": "",
+      "birthday": "2015-11-30 00:00:00",
+      "sex": "0",
+      "currentScore": "3",
+      "totalScore": "3",
+      "lastReadTime": "2018-01-16 17:14:31",
+      "lastNotifyTime": "",
+      "receiverCnt": "",
+      "cartItemCnt": "",
+      "openId": "",
+      "relationPhone": "",
+      "isMember": "0",
+      "isUnReadConsult": "1",
+      "lineUserName": "加盐"
+    },
+    "unPaidCount": 0,
+    "paidCount": 0,
+    "receiverCount": 0
+  }
+}

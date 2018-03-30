@@ -30,7 +30,7 @@
         methods: {
             getCouponList:function(){
                 var _this = this;
-                var couponUrl = "/wechatecom/appserver/coupon/productCouponList.do?currentPage=1&pageSize=3&productId=" 
+                var couponUrl = "/api/coupon/productCouponList.do?currentPage=1&pageSize=3&productId=" 
                 + this.id
                 this.ajaxDataFun('post',couponUrl,function(obj){
                     if(obj.code == '200'){
@@ -49,7 +49,7 @@
                     return 
                 }else{
                     var _this = this
-                    var getUrl = "/wechatecom/appserver/coupon/getCoupon.do?ids=" + _this.couponIds.toString()
+                    var getUrl = "/api/coupon/getCoupon.do?ids=" + _this.couponIds.toString()
                     console.log(getUrl)
                     this.ajaxDataFun('post',getUrl,function(obj){
                         if(obj.code == '200'){

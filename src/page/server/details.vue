@@ -47,7 +47,7 @@
                 if(_locaUrl.indexOf('id') > -1){
                     _this.id = common.getUrlPars(_locaUrl).id
                 }
-                var getDetailsUrl = "/wechatecom/appserver/consult/details?id=" + _this.id + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize
+                var getDetailsUrl = "/api/consult/details?id=" + _this.id + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize
                 // + "&currentPage=" _this.currentPage + "&pageSize=" + _this.pageSize
                 this.ajaxDataFun('post',getDetailsUrl,function(obj){
                     if(obj.code == '200'){
@@ -70,7 +70,7 @@
             },
             sendF:function(){
                 var _this = this
-                var sendUrl = "/wechatecom/appserver/consult/add.do?id=" + _this.id + "&content=" + _this.content + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize
+                var sendUrl = "/api/consult/add.do?id=" + _this.id + "&content=" + _this.content + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize
                 if(_this.content.trim() != ''){
                     this.ajaxDataFun('post',sendUrl, function(obj){
                         if(obj.code == '200'){

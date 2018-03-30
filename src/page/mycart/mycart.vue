@@ -184,7 +184,7 @@
             },
             getMyCart:function(){
                 var _this = this
-                var myCaryUrl = "/wechatecom/appserver/cart/myCart.do"
+                var myCaryUrl = "/api/cart/myCart.do"
                 this.ajaxDataFun('post',myCaryUrl,function(obj){
                     if(obj.code == '200'){
                         _this.showAllDiv = true
@@ -266,33 +266,36 @@
                 var _this = this
                 var delUrl = ''
                 if(_this.isDelOne){
-                    delUrl = '/wechatecom/appserver/cart/delete.do?cartItemIds=' + ids
+                    delUrl = '/api/cart/delete.do'
+                    // ?cartItemIds=' + ids
                 }
 
                 if(_this.isDelMore){
-                    delUrl = '/wechatecom/appserver/cart/delete.do?cartItemIds=' + ids.toString()
+                    delUrl = '/api/cart/delete.do'
+                    // ?cartItemIds=' + ids.toString()
                 }
 
                 this.ajaxDataFun('post',delUrl,function(obj){
-                    if(obj.code == '200'){
-                        popMin.show("icon-icon_selected","删除成功")
-                        if(_this.isDelOne){
-                            _this.removeArr(_this.selectIndex,_this.delIndex)
-                        }
+                    popMin.show("icon-icon_selected","删除成功")
+                    // if(obj.code == '200'){
+                    //     
+                    //     if(_this.isDelOne){
+                    //         _this.removeArr(_this.selectIndex,_this.delIndex)
+                    //     }
 
-                        if(_this.isDelMore){
-                            var l = _this.selectIndex.length - 1 
-                            for(l; l > -1; l--){
-                                if(_this.selectIndex.indexOf(_this.delIdIndex[l]) > -1){
-                                    _this.removeArr(_this.selectIndex,_this.delIdIndex[l])
-                                }
-                            }
-                            _this.isEdit = false
-                        }
-                        _this.itemList = obj.data.itemList
-                        _this.invalidItemList = obj.data.invalidItemList
-                        _this.getMcartNum()
-                    }
+                    //     if(_this.isDelMore){
+                    //         var l = _this.selectIndex.length - 1 
+                    //         for(l; l > -1; l--){
+                    //             if(_this.selectIndex.indexOf(_this.delIdIndex[l]) > -1){
+                    //                 _this.removeArr(_this.selectIndex,_this.delIdIndex[l])
+                    //             }
+                    //         }
+                    //         _this.isEdit = false
+                    //     }
+                    //     _this.itemList = obj.data.itemList
+                    //     _this.invalidItemList = obj.data.invalidItemList
+                    //     _this.getMcartNum()
+                    // }
                 })
             },
             clearInvalid:function(){
@@ -343,7 +346,7 @@
             },
             getMcartNum:function(){
                 var _this = this
-                var numUrl = "/wechatecom/appserver/cart/getCartSkuCount.do"
+                var numUrl = "/api/cart/getCartSkuCount.do"
                 this.ajaxDataFun('post',numUrl,function(obj){
                     if(obj.code == '200'){
                         _this.$store.state.cartNum = obj.data.count

@@ -23,7 +23,7 @@
         },
         created () {
             var _this = this;
-            var _listUrl = "/wechatecom/appserver/module/findModuleList"
+            var _listUrl = "/api/module/findModuleList"
 
             this.ajaxDataFun('post',_listUrl,function(obj){
                 console.log(obj)

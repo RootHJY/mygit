@@ -69,7 +69,7 @@
                     <div class="box">剩余{{ totalStock }}件</div>
                 </div>
             </div>
-            <couponLay :id="id"></couponLay>
+            <!-- <couponLay :id="id"></couponLay> -->
             <proTxt :promotionList="promotionList" v-if="promotionList != ''"></proTxt>
             <div class="norm" @click="showChooseF(0,'00')" v-show="specList.length > 0">
                 <span>已选</span>  
@@ -214,7 +214,7 @@
     import swipe from '@/components/swipeShop'
     import countDown from '@/components/countDown'
     import VTitle from '@/components/title'
-    import couponLay from './coupon'
+    // import couponLay from './coupon'
     import proTxt from './proTxt'
     import groupList from '../group/groupList'
     import groupGame from '../group/groupGame'
@@ -262,7 +262,7 @@
             countDown,
             VTitle,
             swipe,
-            couponLay,
+            // couponLay,
             proTxt,
             packageList,
             groupList,
@@ -297,7 +297,7 @@
             },
             getMcartNum:function(){
                 var _this = this
-                var numUrl = "/wechatecom/appserver/cart/getCartSkuCount.do"
+                var numUrl = "/api/cart/getCartSkuCount.do"
                 this.ajaxDataFun('post',numUrl,function(obj){
                     if(obj.code == '200'){
                         _this.$store.state.cartNum = obj.data.count
@@ -310,17 +310,19 @@
                 var detailsUrl = ''
 
                 if(source){
-                    detailsUrl = "/wechatecom/appserver/product/details.do?productId=" + this.id + "&specVals=" + val + "&channelId=" + common.getUrlPars(source).channelId + "&putProjectId=" + common.getUrlPars(source).putProjectId 
+                    detailsUrl = "/api/product/details";
+                    // .do?productId=" + this.id + "&specVals=" + val + "&channelId=" + common.getUrlPars(source).channelId + "&putProjectId=" + common.getUrlPars(source).putProjectId 
                 }else{
-                    detailsUrl = "/wechatecom/appserver/product/details.do?productId=" + this.id + "&specVals=" + val
+                    detailsUrl = "/api/product/details";
+                    // s.do?productId=" + this.id + "&specVals=" + val
                 }
 
                 this.ajaxDataFun('post',detailsUrl,function(obj){
                     if(obj.code == '200'){
                         _this.showAllDiv = true
 
-                        var _data = obj.data
-                        _this.image = _data.image   //图片列表
+                        var _data = obj.data;
+                        _this.image = _data.image   //片列表
                         _this.swipeList = _data.imageList   //图片列表
                         _this.pageTitle = _data.name
                         _this.promotion = _data.promotion   //是否有活动 包含折扣信息
@@ -441,7 +443,8 @@
                     return 
                 }else{
                     _this.isShowChoose = false
-                    let addCartUrl = '/wechatecom/appserver/cart/add.do?productWareId=' + _this.productWareId + "&quantity=" + _this.quantity
+                    let addCartUrl = '/api/cart/add.do'
+                    // ?productWareId=' + _this.productWareId + "&quantity=" + _this.quantity
                     this.ajaxDataFun('post',addCartUrl,function(obj){
                         if(obj.code == '200'){
                             popMin.show("icon-success","加入购物车成功")

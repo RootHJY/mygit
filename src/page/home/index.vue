@@ -59,8 +59,8 @@
         methods: { 
             getBanner:function(){
                 var _this = this
-                var banUrl = "/wechatecom/appserver/ad/findAdByCode.do?code=P_INDEX&type=0"
-                this.ajaxDataFun('post',banUrl,function(obj){
+                var banUrl = "/api/ad/findAdByCode.do?code=P_INDEX&type=0"
+                this._axios('post',banUrl,function(obj){
                     if(obj.code == '200'){
                         _this.swipeList = obj.data.adList
                     }

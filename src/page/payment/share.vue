@@ -74,7 +74,7 @@
            },
            getShopData:function(){
                 var _this = this
-                var _batchNoUrl = '/wechatecom/appserver/order/orderShare.do?batchNo=' + _this.batchNo
+                var _batchNoUrl = '/api/order/orderShare.do?batchNo=' + _this.batchNo
                 _axios.get(_batchNoUrl)
                 .then(function (obj) {
                     if(obj.data.code == '200'){

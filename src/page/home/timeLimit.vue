@@ -103,7 +103,7 @@
         methods: {
             _limitUrl:function() {
                 var _this = this;
-                var _limitUrl = "/wechatecom/appserver/ad/findAdByCode.do?type=1&code=P_SY_GDW_1"
+                var _limitUrl = "/api/ad/findAdByCode.do?type=1&code=P_SY_GDW_1"
                 this.ajaxDataFun('post',_limitUrl,function(obj){
                     if(obj.code == '200'){
                         _this.expireSeconds = obj.data.expireSeconds;
@@ -113,7 +113,7 @@
             },
             _adUrl1:function() {
                 var _this = this;
-                var _adUrl1 = "/wechatecom/appserver/ad/findAdByCode.do?type=1&code=P_SY_GDW_2"
+                var _adUrl1 = "/api/ad/findAdByCode.do?type=1&code=P_SY_GDW_2"
                 this.ajaxDataFun('post',_adUrl1,function(obj){
                     if(obj.code == '200'){
                         _this.ad1 = obj.data.ad;
@@ -122,7 +122,7 @@
             },
             _adUrl2:function() {
                 var _this = this;
-                var _adUrl2 = "/wechatecom/appserver/ad/findAdByCode.do?type=1&code=P_SY_GDW_3"
+                var _adUrl2 = "/api/ad/findAdByCode.do?type=1&code=P_SY_GDW_3"
                 this.ajaxDataFun('post',_adUrl2,function(obj){
                     if(obj.code == '200'){
                         _this.ad2 = obj.data.ad;
@@ -131,7 +131,7 @@
             },
             _adUrl3:function() {
                 var _this = this;
-                var _adUrl3 = "/wechatecom/appserver/ad/findAdByCode.do?type=1&code=P_SY_GDW_4"
+                var _adUrl3 = "/api/ad/findAdByCode.do?type=1&code=P_SY_GDW_4"
                 this.ajaxDataFun('post',_adUrl3,function(obj){
                     if(obj.code == '200'){
                         _this.ad3 = obj.data.ad;
@@ -140,7 +140,7 @@
             },
             _adUrl4:function() {
                 var _this = this;
-                var _adUrl4 = "/wechatecom/appserver/ad/findAdByCode.do?type=1&code=P_SY_GDW_5"
+                var _adUrl4 = "/api/ad/findAdByCode.do?type=1&code=P_SY_GDW_5"
                 this.ajaxDataFun('post',_adUrl4,function(obj){
                     if(obj.code == '200'){
                         _this.ad4 = obj.data.ad;
@@ -149,7 +149,7 @@
             },
             _adUrl5:function() {
                 var _this = this;
-                var _adUrl5 = "/wechatecom/appserver/ad/findAdByCode.do?type=1&code=P_SY_GDW_6"
+                var _adUrl5 = "/api/ad/findAdByCode.do?type=1&code=P_SY_GDW_6"
                 this.ajaxDataFun('post',_adUrl5,function(obj){
                     if(obj.code == '200'){
                         _this.ad5 = obj.data.ad;

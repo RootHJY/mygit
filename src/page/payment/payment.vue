@@ -154,7 +154,7 @@
             },
             getOrderList:function(){
                 var _this = this
-                var _billUrl = "/wechatecom/appserver/order/bill.do?items=" + this.orderItems + "&promotionId=" + _this.promotionId + "&promotionType=" +  _this.promotionType + "&ptId=" + _this.ptId + "&receiverId=" + _this.orderAddId  + "&couponRecordId=" + _this.$store.state.orderCouponId
+                var _billUrl = "/api/order/bill.do?items=" + this.orderItems + "&promotionId=" + _this.promotionId + "&promotionType=" +  _this.promotionType + "&ptId=" + _this.ptId + "&receiverId=" + _this.orderAddId  + "&couponRecordId=" + _this.$store.state.orderCouponId
                 this.ajaxDataFun('post',_billUrl,function(obj){
                     if(obj.code == '200'){
                          _this.showAllDiv = true
@@ -196,7 +196,7 @@
                         _this.showPayPop = true
                         console.log("订单ID已存在===" + _this.orderId)
                     }else{
-                        var _createUrl = "/wechatecom/appserver/order/create.do?items=" + _this.orderItems + "&promotionId=" +  _this.promotionId + "&promotionType=" +  _this.promotionType + "&ptId=" + _this.ptId + "&receiverId=" + _this.$store.state.orderAddId + "&couponRecordId=" +  _this.$store.state.orderCouponId + "&memo=" +  _this.$store.state.orderMemo
+                        var _createUrl = "/api/order/create.do?items=" + _this.orderItems + "&promotionId=" +  _this.promotionId + "&promotionType=" +  _this.promotionType + "&ptId=" + _this.ptId + "&receiverId=" + _this.$store.state.orderAddId + "&couponRecordId=" +  _this.$store.state.orderCouponId + "&memo=" +  _this.$store.state.orderMemo
 
                         this.ajaxDataFun('post',_createUrl,function(obj){
                             if(obj.code == '200'){
@@ -215,7 +215,7 @@
             },
             getMcartNum:function(){
                 var _this = this
-                var numUrl = "/wechatecom/appserver/cart/getCartSkuCount.do"
+                var numUrl = "/api/cart/getCartSkuCount.do"
                 this.ajaxDataFun('post',numUrl,function(obj){
                     if(obj.code == '200'){
                         _this.$store.state.cartNum = obj.data.count

@@ -129,7 +129,7 @@
             var urlList = common.getUrlPars(window.location.href);
             this.itemId = urlList.id;
             var _this = this;
-            var _corpList = '/wechatecom/appserver/deliveryCorp/deliveryCorpList';
+            var _corpList = '/api/deliveryCorp/deliveryCorpList';
             this.ajaxDataFun('post', _corpList, function(obj){
                 if(obj.code == '200'){
                     _this.corpList = obj.data;
@@ -202,7 +202,7 @@
             saveRefund:function(event){
                 var _this = this
                 var file = this.imageLists[0] + ',' + this.imageLists[1] + ',' + this.imageLists[2] + ',' + this.imageLists[3];
-                var _refundUrl = '/wechatecom/appserver/refund/updateRefund?id='+ this.itemId + '&deliveryCorpId=' + this.logisticCom + '&trackingNo=' + this.logisNum + '&phone=' + this.phone + '&memo=' + this.memo + '&imageUrl=' + file;
+                var _refundUrl = '/api/refund/updateRefund?id='+ this.itemId + '&deliveryCorpId=' + this.logisticCom + '&trackingNo=' + this.logisNum + '&phone=' + this.phone + '&memo=' + this.memo + '&imageUrl=' + file;
                 if(!this.logisticCom){
                     popMin.show("icon-sign","请选择物流公司")
                 }else if(!this.logisNum){

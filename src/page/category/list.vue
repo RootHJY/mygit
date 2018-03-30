@@ -101,7 +101,7 @@
                 var _this = this
                     _this.endListen = false
 
-                var _listUrl = "/wechatecom/appserver/group/groupSearch.do?groupId=" + this.groupId + "&sortType=" + this.sortType + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize 
+                var _listUrl = "/api/group/groupSearch.do?groupId=" + this.groupId + "&sortType=" + this.sortType + "&currentPage=" + this.currentPage + "&pageSize=" + this.pageSize 
 
                 this.ajaxDataFun('post',_listUrl,function(obj){
                     if(obj.code == '200'){

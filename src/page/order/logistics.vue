@@ -61,7 +61,7 @@
         methods: { 
             getLogistics:function(v) {
             	var _this = this;
-            	var _logisticsUrl = '/wechatecom/appserver/shipping/queryLogisticsInfo?batchNo='+ this.batchNo;
+            	var _logisticsUrl = '/api/shipping/queryLogisticsInfo?batchNo='+ this.batchNo;
             	_this.ajaxDataFun('post',_logisticsUrl,function(obj){
                     if(obj.code == '200'){
                     	var _obj = obj.data;

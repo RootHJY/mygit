@@ -57,7 +57,7 @@
                     return
                 }else{
 	                var _this = this
-	                var _getCardUrl = "/wechatecom/appserver/login/userReceiveMember"
+	                var _getCardUrl = "/api/login/userReceiveMember"
 	                this.ajaxDataFun('post',_getCardUrl,function(obj){
 	                    if(obj.code == '200'){
 	                        _this.tips = '去使用'

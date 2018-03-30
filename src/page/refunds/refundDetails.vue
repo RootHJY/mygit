@@ -199,7 +199,7 @@
         methods: { 
             getDetials:function(v) {
             	var _this = this;
-            	var _refDetailsUrl = '/wechatecom/appserver/refund/refundDetail?id='+ this.refundId;
+            	var _refDetailsUrl = '/api/refund/refundDetail?id='+ this.refundId;
             	_this.ajaxDataFun('post',_refDetailsUrl,function(obj){
                     if(obj.code == '200'){
                         _this.refundDetails = obj.data;
@@ -213,7 +213,7 @@
             cancelRefund: function(id) {
                 this.cancelRef = false;
                 var _this = this;
-                var _cancelUrl = '/wechatecom/appserver/refund/cancelRefunds?id='+ id +'&status=6';
+                var _cancelUrl = '/api/refund/cancelRefunds?id='+ id +'&status=6';
                 _this.ajaxDataFun('post',_cancelUrl,function(obj){
                     if(obj.code == '200'){
                         popMin.show("icon-success","取消成功");

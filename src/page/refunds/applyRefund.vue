@@ -307,7 +307,7 @@
             // 获取是否能看见退款提示
             getFlag:function(){
                 var _this = this;
-                var _getFlagUrl = '/wechatecom/appserver/refund/checkRefundOpen';
+                var _getFlagUrl = '/api/refund/checkRefundOpen';
                 _this.ajaxDataFun('post',_getFlagUrl,function(obj){
                     if(obj.code == '200'){
                         _this.isWatched = obj.data;
@@ -400,7 +400,7 @@
             saveRefund:function(event){
                 var _this = this
                 var file = this.imageLists[0] + ',' + this.imageLists[1] + ',' + this.imageLists[2] + ',' + this.imageLists[3];
-                var _refundUrl = '/wechatecom/appserver/refund/createRefund?itemId='+ this.itemId + '&refundsType=' + (this.type-1) + '&wareStatus=' + (this.goodsActive-1) + '&refundsDesc=' + this.reasonsList[this.reasonsActive-1] + '&applyAmount=' + this.money + '&phone=' + this.phone + '&memo=' + this.memo + '&imageUrls=' + file;
+                var _refundUrl = '/api/refund/createRefund?itemId='+ this.itemId + '&refundsType=' + (this.type-1) + '&wareStatus=' + (this.goodsActive-1) + '&refundsDesc=' + this.reasonsList[this.reasonsActive-1] + '&applyAmount=' + this.money + '&phone=' + this.phone + '&memo=' + this.memo + '&imageUrls=' + file;
                 if(!this.goodsActive){
                     popMin.show("icon-sign","请选择货物状态")
                 }else if(!this.reasonsActive){

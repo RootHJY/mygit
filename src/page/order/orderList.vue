@@ -139,7 +139,7 @@
             getList:function(v) {
             	var _this = this;
                     _this.endListen = false
-            	var _listUrl = '/wechatecom/appserver/order/list?orderStatus='+ this.orderStatus +'&currentPage=' + this.currentPage + '&pageSize=' + this.pageSize;
+            	var _listUrl = '/api/order/list?orderStatus='+ this.orderStatus +'&currentPage=' + this.currentPage + '&pageSize=' + this.pageSize;
             	_this.ajaxDataFun('post',_listUrl,function(obj){
                     if(obj.code == '200'){
                         if(v){
@@ -168,7 +168,7 @@
             },
             updateStatus: function(id) {
                 var _this = this;
-                var _updateUrl = '/wechatecom/appserver/order/updateStatus?orderId='+ id +'&orderStatus=08';
+                var _updateUrl = '/api/order/updateStatus?orderId='+ id +'&orderStatus=08';
                 _this.ajaxDataFun('post',_updateUrl,function(obj){
                     if(obj.code == '200'){
                         popMin.show("icon-success","已确认收货");

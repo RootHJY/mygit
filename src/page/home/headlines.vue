@@ -33,7 +33,7 @@
         },
         created () {
             var _this = this;
-            var headlinesUrl = "/wechatecom/appserver/notice/findNoticeList.do?noticeType=1"
+            var headlinesUrl = "/api/notice/findNoticeList.do?noticeType=1"
             this.ajaxDataFun('post',headlinesUrl,function(obj){
                 if(obj.code == '200'){
                     var len  = obj.data.length

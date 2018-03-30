@@ -146,7 +146,7 @@
                 this.postionY = position.coords.longitude
 
                 var _this = this
-                var _xyUrl = "/wechatecom/appserver/member/receiver/dw.do?lon=" + this.postionY  + "&lat=" + this.postionX
+                var _xyUrl = "/api/member/receiver/dw.do?lon=" + this.postionY  + "&lat=" + this.postionX
 
                 this.ajaxDataFun('post', _xyUrl, function(obj){
                     if(obj.code == '200'){
@@ -198,9 +198,9 @@
                 var addUrl = ''
                 var _this = this
                 if(this.addId){
-                    addUrl = "/wechatecom/appserver/member/receiver/update.do?phone=" + this.phone + "&consignee=" + this.consignee + "&areaName=" + this.areaName + "&address=" + this.address + "&area=" + this.areaCode + "&isDefault=" + this.isDefault + "&id=" + this.addId
+                    addUrl = "/api/member/receiver/update.do?phone=" + this.phone + "&consignee=" + this.consignee + "&areaName=" + this.areaName + "&address=" + this.address + "&area=" + this.areaCode + "&isDefault=" + this.isDefault + "&id=" + this.addId
                 }else{
-                    addUrl = "/wechatecom/appserver/member/receiver/add.do?phone=" + this.phone + "&consignee=" + this.consignee + "&areaName=" + this.areaName + "&address=" + this.address + "&area=" + this.areaCode + "&isDefault=" + this.isDefault
+                    addUrl = "/api/member/receiver/add.do?phone=" + this.phone + "&consignee=" + this.consignee + "&areaName=" + this.areaName + "&address=" + this.address + "&area=" + this.areaCode + "&isDefault=" + this.isDefault
                 }
 
                 if(!this.consignee.trim().length){
@@ -243,7 +243,7 @@
             },
             getAddData:function(){
                 var _this = this
-                var getAddUrl = "/wechatecom/appserver/member/receiver/detail.do?id=" + this.addId
+                var getAddUrl = "/api/member/receiver/detail.do?id=" + this.addId
                 this.ajaxDataFun('post', getAddUrl, function(obj){
                     if(obj.code == '200'){
                         var _data = obj.data

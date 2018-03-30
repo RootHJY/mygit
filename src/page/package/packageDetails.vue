@@ -63,7 +63,7 @@
             },
             getAllData:function(val){
                 var _this = this
-                var detailsUrl = "/wechatecom/appserver/product/details.do?productId=" + this.id + "&specVals=" + val
+                var detailsUrl = "/api/product/details.do?productId=" + this.id + "&specVals=" + val
                 this.ajaxDataFun('post',detailsUrl,function(obj){
                     if(obj.code == '200'){
                         _this.showAllDiv = true
@@ -133,7 +133,7 @@
             },
             getOrderList:function(){
                 var _this = this
-                var _billUrl = "/wechatecom/appserver/order/bill.do?items=" + this.orderItems + "&promotionId=" + _this.promotionId + "&promotionType=tc&ptId=&receiverId=&couponRecordId="
+                var _billUrl = "/api/order/bill.do?items=" + this.orderItems + "&promotionId=" + _this.promotionId + "&promotionType=tc&ptId=&receiverId=&couponRecordId="
                 this.ajaxDataFun('post',_billUrl,function(obj){
                     if(obj.code == '610'){
                         popMin.show('icon-sign', obj.msg, 'big')

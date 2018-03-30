@@ -99,7 +99,7 @@
             },
             updataQuaF:function(){   // 更新数量
                 var _this = this
-                var updataNumUrl = "/wechatecom/appserver/cart/update.do?cartItemId=" + _this.cartId + "&quantity=" + this.quantity
+                var updataNumUrl = "/api/cart/update.do?cartItemId=" + _this.cartId + "&quantity=" + this.quantity
                 this.ajaxDataFun('post',updataNumUrl,function(obj){
                     if(obj.code == '200'){
                         _this.$emit('postList',obj.data.itemList)
@@ -118,7 +118,7 @@
                 }
 
                 var _this = this
-                var updataUrl = "/wechatecom/appserver/cart/update.do?cartItemId=" + this.cartId + "&productWareId=" + this.productWareId + "&quantity=" + this.quantity
+                var updataUrl = "/api/cart/update.do?cartItemId=" + this.cartId + "&productWareId=" + this.productWareId + "&quantity=" + this.quantity
                 this.ajaxDataFun('post',updataUrl,function(obj){
                     if(obj.code == '200'){
                         _this.isShow = false
@@ -133,10 +133,10 @@
                 _this.productWareId = _data.productWareId
                 var detailsUrl = ''
                 if(val){
-                    detailsUrl = "/wechatecom/appserver/product/details.do?productId=" + _this.productId 
+                    detailsUrl = "/api/product/details.do?productId=" + _this.productId 
                     + "&specVals=" + val
                 }else{
-                    detailsUrl = "/wechatecom/appserver/product/details.do?productId=" + _this.productId 
+                    detailsUrl = "/api/product/details.do?productId=" + _this.productId 
                     + "&productWareId=" + _this.productWareId
                 }
 

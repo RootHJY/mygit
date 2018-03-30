@@ -81,7 +81,7 @@
             refundList: function(v){
                 var _this = this;
                     _this.endListen = false
-                var _refundUrl = '/wechatecom/appserver/refund/refundList?currentPage='+ this.currentPage + '&pageSize=' + this.pageSize;
+                var _refundUrl = '/api/refund/refundList?currentPage='+ this.currentPage + '&pageSize=' + this.pageSize;
                 this.ajaxDataFun('post',_refundUrl,function(obj){
                     if(obj.code == '200'){
                         if(v){

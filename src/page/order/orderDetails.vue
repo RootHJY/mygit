@@ -246,7 +246,7 @@
         methods: { 
             getDetials:function(v) {
             	var _this = this;
-            	var _detailsUrl = '/wechatecom/appserver/order/details?sn='+ this.sn 
+            	var _detailsUrl = '/api/order/details?sn='+ this.sn 
             	_this.ajaxDataFun('post',_detailsUrl,function(obj){
                     if(obj.code == '200'){
                         _this.showAllDiv = true
@@ -306,7 +306,7 @@
             cancelOrder: function(id) {
                 var _this = this;
                 _this.showdelPop = false;
-                var _updateUrl = '/wechatecom/appserver/order/updateStatus?orderId='+ id +'&orderStatus=09';
+                var _updateUrl = '/api/order/updateStatus?orderId='+ id +'&orderStatus=09';
                 _this.ajaxDataFun('post',_updateUrl,function(obj){
                     if(obj.code == '200'){
                         popMin.show("icon-success","取消成功");
@@ -332,7 +332,7 @@
             },
             completeOrder:function(status){
                 var _this = this;
-                var _completeUrl = '/wechatecom/appserver/order/updateStatus?orderId='+ _this.orderId +'&orderStatus=08';
+                var _completeUrl = '/api/order/updateStatus?orderId='+ _this.orderId +'&orderStatus=08';
                 _this.ajaxDataFun('post',_completeUrl,function(obj){
                     if(obj.code == '200'){
                         popMin.show("icon-success","已确认收货");

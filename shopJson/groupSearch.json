@@ -1,1 +1,86 @@
-{"msg":"操作成功!","code":"200","data":[{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171128/b02c2b78-1c52-4a19-a97f-51811dd8c58f","price":"1.88","name":"告白气球-小鳄鱼私人-勿动","costPrice":"","productMark":"","id":"891"},{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171212/f8cd29f2-fc09-4903-9a0f-8cb93e24b6db","price":"0.01","name":"机器猫奶油蛋糕-Schnappi","costPrice":"300.0","productMark":"拼团","id":"913"},{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171206/6e8b54ff-8cc8-40db-988a-f69038e62d87","price":"33.0","name":"NEC-test-product-update","costPrice":"","productMark":"","id":"912"},{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171128/bcdf779a-3ddf-4720-a2f7-aa68db17cd8c","price":"122.0","name":"砀山酥梨","costPrice":"","productMark":"","id":"895"},{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171127/d7650f9d-e7e3-43ab-9452-1af22f5bad01","price":"80.0","name":"不知火一号-雯子","costPrice":"","productMark":"","id":"881"},{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171129/82024083-7c48-473c-8ee1-5614c9df39ff","price":"80.0","name":"小龙坎方便小火锅--418g/盒--hui","costPrice":"","productMark":"","id":"901"},{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171129/adfe4623-6875-42fb-b1e2-12b757a0dcdd","price":"148.0","name":"每日坚果--hui","costPrice":"","productMark":"","id":"900"},{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171129/66a9af29-d137-4ead-bee0-6459b486f7bd","price":"0.01","name":"拒绝退款&mdash&mdash商品退款","costPrice":"","productMark":"","id":"905"},{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171130/76033364-d3cd-4c0e-ac5f-6d1a6792ed29","price":"0.01","name":"退款申请取消&mdash&mdash商品退款","costPrice":"","productMark":"","id":"911"},{"image":"https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171129/5cc1f479-af7d-499b-97c9-262e8ea9e1cc","price":"0.01","name":"确认收货&mdash&mdash商品退款","costPrice":"","productMark":"","id":"910"}]}
+{
+  "msg": "操作成功!",
+  "code": "200",
+  "data": [
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171128/b02c2b78-1c52-4a19-a97f-51811dd8c58f",
+      "price": "1.88",
+      "name": "告白气球-小鳄鱼私人-勿动",
+      "costPrice": "",
+      "productMark": "",
+      "id": "891"
+    },
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171212/f8cd29f2-fc09-4903-9a0f-8cb93e24b6db",
+      "price": "0.01",
+      "name": "机器猫奶油蛋糕-Schnappi",
+      "costPrice": "300.0",
+      "productMark": "拼团",
+      "id": "913"
+    },
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171206/6e8b54ff-8cc8-40db-988a-f69038e62d87",
+      "price": "33.0",
+      "name": "NEC-test-product-update",
+      "costPrice": "",
+      "productMark": "",
+      "id": "912"
+    },
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171128/bcdf779a-3ddf-4720-a2f7-aa68db17cd8c",
+      "price": "122.0",
+      "name": "砀山酥梨",
+      "costPrice": "",
+      "productMark": "",
+      "id": "895"
+    },
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171127/d7650f9d-e7e3-43ab-9452-1af22f5bad01",
+      "price": "80.0",
+      "name": "不知火一号-雯子",
+      "costPrice": "",
+      "productMark": "",
+      "id": "881"
+    },
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171129/82024083-7c48-473c-8ee1-5614c9df39ff",
+      "price": "80.0",
+      "name": "小龙坎方便小火锅--418g/盒--hui",
+      "costPrice": "",
+      "productMark": "",
+      "id": "901"
+    },
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171129/adfe4623-6875-42fb-b1e2-12b757a0dcdd",
+      "price": "148.0",
+      "name": "每日坚果--hui",
+      "costPrice": "",
+      "productMark": "",
+      "id": "900"
+    },
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171129/66a9af29-d137-4ead-bee0-6459b486f7bd",
+      "price": "0.01",
+      "name": "拒绝退款&mdash&mdash商品退款",
+      "costPrice": "",
+      "productMark": "",
+      "id": "905"
+    },
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171130/76033364-d3cd-4c0e-ac5f-6d1a6792ed29",
+      "price": "0.01",
+      "name": "退款申请取消&mdash&mdash商品退款",
+      "costPrice": "",
+      "productMark": "",
+      "id": "911"
+    },
+    {
+      "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171129/5cc1f479-af7d-499b-97c9-262e8ea9e1cc",
+      "price": "0.01",
+      "name": "确认收货&mdash&mdash商品退款",
+      "costPrice": "",
+      "productMark": "",
+      "id": "910"
+    }
+  ]
+}
