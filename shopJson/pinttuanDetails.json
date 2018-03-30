@@ -1,0 +1,142 @@
+{
+  "msg": "",
+  "code": "200",
+  "data": {
+    "id": "913",
+    "name": "机器猫奶油蛋糕-Schnappi",
+    "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171212/f8cd29f2-fc09-4903-9a0f-8cb93e24b6db",
+    "productMark": "拼团",
+    "price": 0.01,
+    "costPrice": 300.0,
+    "promotion": {
+      "id": "195",
+      "buyLimit": "",
+      "price": 0.01,
+      "name": "",
+      "tag": "30人拼团",
+      "minPrice": 0.01,
+      "maxPrice": 0.01,
+      "expireSeconds": 26775569,
+      "type": "pt",
+      "ptSuccNum": 30,
+      "ptFlag": "0"
+    },
+    "specList": [
+      {
+        "id": "133",
+        "name": "颜色",
+        "valueList": [
+          {
+            "id": "562",
+            "name": "蓝",
+            "isSelected": true,
+            "retainStock": 1
+          }
+        ]
+      },
+      {
+        "id": "134",
+        "name": "数量",
+        "valueList": [
+          {
+            "id": "570",
+            "name": "1只",
+            "isSelected": true,
+            "retainStock": 1
+          }
+        ]
+      },
+      {
+        "id": "135",
+        "name": "味道",
+        "valueList": [
+          {
+            "id": "618",
+            "name": "哈哈哈哈哈哈我就想多输一些字的啦噜啦啦啦啦啦啦类",
+            "isSelected": true,
+            "retainStock": 1
+          }
+        ]
+      },
+      {
+        "id": "137",
+        "name": "质量",
+        "valueList": [
+          {
+            "id": "591",
+            "name": "1000g",
+            "isSelected": true,
+            "retainStock": 1
+          }
+        ]
+      },
+      {
+        "id": "138",
+        "name": "形状（不变形的商品）",
+        "valueList": [
+          {
+            "id": "595",
+            "name": "圆形",
+            "isSelected": true,
+            "retainStock": 1
+          }
+        ]
+      }
+    ],
+    "productWareId": "1268",
+    "specImage": "",
+    "imageList": [],
+    "tagList": [
+      "小鳄鱼",
+      "Schnappi"
+    ],
+    "stock": 50,
+    "introduction": "",
+    "totalStock": 50,
+    "freightDesc": "￥20",
+    "minPrice": "",
+    "maxPrice": "",
+    "marketable": true,
+    "promotionList": [],
+    "productSetList": [],
+    "ptList": [],
+    "recommendProductList": [
+      {
+        "id": "890",
+        "name": "大柚子-Schnappi",
+        "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171127/66b47b58-c80a-48af-a398-bd291065ab33",
+        "productMark": "",
+        "price": 3.33,
+        "costPrice": "",
+        "promotion": "",
+        "specList": "",
+        "productWareId": "1156",
+        "specImage": ""
+      },
+      {
+        "id": "890",
+        "name": "大柚子-Schnappi",
+        "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171127/66b47b58-c80a-48af-a398-bd291065ab33",
+        "productMark": "",
+        "price": 3.33,
+        "costPrice": "",
+        "promotion": "",
+        "specList": "",
+        "productWareId": "1156",
+        "specImage": ""
+      },
+      {
+        "id": "888",
+        "name": "花牛苹果-Schnappi",
+        "image": "https://testddc.oss-cn-hangzhou.aliyuncs.com/production/ecom/images/20171127/eb1cdd0c-e1cf-4e7f-9652-ab4b3574539d",
+        "productMark": "",
+        "price": 1.0,
+        "costPrice": "",
+        "promotion": "",
+        "specList": "",
+        "productWareId": "1143",
+        "specImage": ""
+      }
+    ]
+  }
+}

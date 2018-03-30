@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+.noBgBtn{ height:40px; line-height:40px; color:#A5A4A4; font-size:14px; @extend %fontPF; border-radius:100px; border: 1px solid #C7C7C7; text-align: center;  
+    &.min{ height:30px; line-height:28px; }
+    &.more{ line-height: 1; padding-top:5px;
+        p{ font-size: 14px; color:#A5A4A4;}
+        span{ font-size: 10px; color: #A5A4A4;}
+    }
+    &.active{  color:$colorh;  border-color:$colorh; 
+        a,p{ color:$colorh; }
+    }
+}
+
+.sureBtn{ height:40px; line-height:40px; color:#fff; font-size:14px; @extend %fontPF;  border-radius:100px; text-align: center;  border-radius: 100px; background-color:#c4c4c4; 
+    &.active{ background-image: linear-gradient(-135deg, #FF7E5A 0%, $colorh 100%); box-shadow: 0 2px 10px 0 rgba(255,93,49,0.45); 
+    }
+    a{ color:#fff;}
+}
+
+.edBtn{ background-color: #E1E1E1;  height:40px; line-height:40px; color: #7F7F7F;  @extend %fontPF;  border-radius:100px; font-size:14px; }
+
+.mint-swipe-indicator{ width:5px!important; height:5px!important; background-color:#7A7A7C!important;}
+.mint-swipe-indicator.is-active{ border:1px solid rgba(0,0,0,0.2); opacity:1!important; background-color:#fff!important;}
+
+//商品详情
+.shopDetails{
+    .mint-swipe-indicators{ bottom:25px;}
+    .shopSlide{ margin-bottom:-20px; font-size:0; }
+    .disLimit{ background-image: linear-gradient(-135deg, #FF7E5A 0%, #FF5D31 100%); padding:12px 14px 8px 14px; margin:0 14px 0px 14px; color:#fff; position:relative; z-index: 2;
+        .priceReal{ @extend %fontPF; margin-bottom:2px; line-height: 1;  color:#fff; font-size: 12px; margin-left:-3px; margin-right:-3px;
+            span{ font-size: 24px; color:#fff; }
+            em{ font-size:12px; color:#fff;}
+        }
+        .priceOld{font-size: 12px; 
+            em{ color: #fff; text-decoration:line-through;}
+        }
+        .right{ vertical-align: bottom; 
+            p{ font-size: 10px; color: #FFFFFF; @extend %fontPF; opacity:0.75; text-align: right;}
+            span{  font-size: 12px; color: #FFFFFF; @extend %fontPF; }
+        }
+    }
+    .shopInfo{ margin:0px 14px 10px 14px;  padding:18px 14px 6px 14px; box-shadow: 0 0 4px 0 rgba(0,0,0,0.03), 0 1px 10px 0 rgba(0,0,0,0.05); position:relative; z-index: 2; background-color:#fff;
+        .title{ font-size: 16px; color: #000000; margin-bottom:7px; margin-top:10px; line-height:1.5;  -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; display: -webkit-box;
+            &.limit{ margin-top: 0;}
+        }
+        .tip{ 
+            span{ font-size: 10px; color: $colorh; line-height:1; border:1px solid $colorh; padding:0 1px; margin-right:4px;}
+            .bg{ background-color:$colorh; color:#fff;}
+        }
+        .price{ color:$colorh; @extend %fontPF; margin-bottom:8px; line-height: 1;
+            span{ font-size: 18px; margin-left:-4px; margin-right:-3px;}
+            em{ font-size:12px; }
+        }
+        .more{ font-size: 12px; color: #A5A4A4; }
+    }
+    .couponTxt{ position:relative;  padding:10px 14px;
+        p{ font-size: 12px; color: #7F7F7F; line-height:1.9;}
+        .pullBtn{ position: absolute; top:0; bottom:0; margin:auto; right:14px; z-index: 2; background: #FFFFFF;
+            border: 1px solid #c4c4c4; border-radius: 100px; width:62px; height:25px; line-height:25px; color:#474747; text-align: center; font-size:12px;
+            &.active{ color:$colorh; border-color:$colorh;}
+            &.ed{ color: #c4c4c4; }
+        } 
+    }
+    //促销
+    .pro{ padding:9px 14px;   border-top:1px solid #F8F8F8; border-bottom:1px solid #F8F8F8;
+        li{ margin:2px 0;}
+        span{ font-size:14px; width:14px; line-height:14px; text-align: center; font-size:10px; color:#fff; background-color:$colorh; @include ismiddle; margin-right:4px;}
+        p{ font-size: 12px;  color: #7F7F7F; @include ismiddle;}
+    }
+    //选商品
+    .norm{ padding-left: 14px; height:51px; line-height:46px; border-bottom:7px solid #F8F8F8;  position:relative;
+        span{ margin-right:15px; @include ismiddle;}
+        p{ width:cal(276,375); @extend %textmore; @include ismiddle;} 
+        &:after{ content:''; width:0; height:0; border-left:3px solid #C9C9C9; border-top:3px solid transparent;  border-bottom:3px solid transparent; position:absolute; top:5px; bottom:0; margin:auto; right:14px;
+        }
+    }
+    //富文本
+    .shopMore{padding-top: 20px; overflow-x:hidden;
+        .title{ font-size: 14px; padding-left: 14px; color:#0e0e0e; }
+        .shopContent{ padding:14px;
+            img{height:auto!important;}
+        }
+    }
+}
+
+
+//组团
+.groupList{ padding:20px 14px;
+    .tip{font-size: 14px; color: #000000; margin-bottom:5px;}
+    .item{ position:relative;  padding:6px 0; margin-bottom:6px;
+        img{ position:absolute; left:0px; top:6px; width:35px; height:35px; border-radius:50%; }
+        .info{  @include ismiddle; padding-left: 43px;
+            b{ font-size: 12px; color: #474747; font-weight:normal;}
+            p{ font-size: 12px; color: #A5A4A4;}
+            span{ color:#000;}
+        }
+        .btn{ width:62px;  @include ismiddle; color:$colorh;  line-height:25px; text-align: center; font-size:12px; border:1px solid $colorh; border-radius:30px;}
+    }
+}
+
+.groupGame{ padding:10px 14px 10px 14px;
+    .tip{font-size: 14px; color: #000000; margin-bottom:9px;}
+    li{ width:20%; text-align: center;
+        .icon{ width:40px; height:40px; margin:auto; background-color:#FFF2EF; border-radius:50%; line-height:56px;}
+        span{ font-size:16px; }
+        p{ font-size: 12px; color: #474747; margin-top: 5px;}
+    }
+    li.min{ width:20px; text-align: center; vertical-align: text-bottom; padding-bottom: 3px;
+        span{ color:#A5A4A4; font-size: 10px;}
+    }
+}   
+
+//套餐
+.packageWrap{  padding:20px 14px; border-bottom:7px solid #f8f8f8;
+    li{ @include ismiddle; position:relative; }
+    .good{ width:17.3%; margin-right:20px;
+        &:last-child{ margin-right: 0;}
+        &:first-child:after{ content:''; display:none;}
+        &:after{ content:'+'; position:absolute; top:21%; left:-15px; color: #A5A4A4; }
+        p{ color:#474747; font-size:12px; margin-top:10px; text-align: center;}
+    }
+    .last{ width:30%; text-align:right; margin-left: 5%; float:right;
+        .nPrice{  color:#666; font-size:12px; color:#000;
+            span{ font-size:10px;}
+        }
+        .oPrice{color:#A5A4A4; text-decoration:line-through; font-size: 12px; }
+        .btn{  color:$colorh; border:1px solid $colorh; padding:3px 6px; display:inline-block; font-size:12px; border-radius:30px; margin-top: 10px;} 
+    }
+}
+
+//购物车
+.myCart{  color:#fff;
+    .reduced{ height:42px; line-height:42px; border-bottom:1px solid #EEEEEE; border-top:1px solid #EEEEEE; padding:0 14px; position:relative;
+        span{  border:1px solid $colorh; border-radius:1px; background-color:#fff; color:$colorh; font-size:10px; line-height: 1; @include ismiddle; padding:1px 5px;}
+        p{ font-size: 12px; line-height: 1; color: #474747;  @include ismiddle; width:76%; @extend %textmore; }
+        .right{ position:absolute; right:14px; top:0; font-size: 12px; color: #474747;
+            a{font-size: 12px; color: #474747; position:relative;}
+            &:after{ content:''; width:0; height:0; border-left:4px solid #474747; border-top:4px solid transparent;  border-bottom:4px solid transparent; margin-top:-4px; position:absolute; right:-8px; top:50%;}
+        }
+    }   
+}
+
+.editCart{ height:45px; line-height:45px; padding:0 14px; color:#474747;
+    span,p{ @include ismiddle;}
+    span{ font-size:16px; margin-right: 2px;}
+}
+
+//选择按钮
+.choseThis{ 
+    &:after{ content:''; width:0; height:100%; overflow:hidden; @include ismiddle; }
+    em{ font-size: 10px; color: #A5A4A4; background: rgba(165,164,164,0.2); margin-left: -3px; border-radius: 100px; padding:0px 5px;}
+    p{ @include ismiddle;}
+}
+
+
+
+//购物车列表
+.listCart{ padding:14px; 
+    &.ed{ border-top:7px solid #F8F8F8;; }
+    .item{ 
+        .choseThis{ width:cal(30,345); height:60px; @include ismiddle; }
+        .orderListInfo{ width:cal(310,345); @include ismiddle; 
+            .des{ padding-top: 0;
+                b{ line-height: 1.4;}
+            }
+            .price{ bottom:5px;}
+        }
+        .operating{ width:67%; @include ismiddle; }
+    }
+}
+
+//购物车操作右边
+.operating{  
+    .choseNum{ width:73%; 
+        span{ @include ismiddle; font-size:20px; width:20%; @extend %fontPFL; color:#000;}
+        input{ @include ismiddle; width:40%; margin:0 10%; text-align:center; line-height: 1; border:0px none; font-size: 14px; color: #000; @extend %fontPF;}
+    }
+    .choseInfo{ border:1px solid #C4C4C4; line-height: 1; width:73%; border-radius: 100px; font-size: 10px; color: #A5A4A4; padding:4px 12px 4px 6px; margin-top:15px; @extend %textmore; position:relative;    
+        &:after{ content:'';  width:0; height:0; border-top:3px solid #C9C9C9; border-left:3px solid transparent;  border-right:3px solid transparent; position:absolute; top:0; bottom:0; margin:auto; right:5px;
+        }
+    }
+    .del{ position:absolute; right:0; top:0; width:54px; height:100%; background-color:$colorh;  text-align: center; margin-right:-14px;
+        &:after{ content:''; width:0; height:100%; overflow:hidden; @include ismiddle; }
+        span{ color:#fff; font-size: 14px; @include ismiddle;}
+    }
+ }
+
+.clearFailure{ text-align: center; color: #A5A4A4; font-size:12px; border-bottom:1px solid #e1e1e1; padding-bottom:10px; margin-top: 10px; }
+
+
+
+

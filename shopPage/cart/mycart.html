@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/page.css?v=20170315">
+    <link rel="stylesheet" type="text/css" href="../../static/css/animate.min.css">
+    <title> 我的购物车 </title>
+</head>
+<body>
+    <div id="container">
+        <div class="myCart ">
+            <div class="editCart hide">
+                <span class="icon-edit"></span>
+                <p>编辑购物车</p>
+            </div>
+            <div class="editCart ">
+                <span class="icon-finish"></span>
+                <p>完成编辑</p>
+            </div>
+            <div class="reduced clearfix">
+                <span>满减</span>
+                <p>再购1.1元立享受【满99元减10元】</p>
+                <div class="right">去凑单</div> 
+            </div>
+            <!-- 购物车商品 -->
+            <div class="listCart ">
+                <div class="item justify">
+                    <label class="choseThis box">
+                        <input type="checkbox" name="checkbox"  />
+                    </label>
+                    <div class="orderListInfo box justify">
+                        <div class="img box">
+                            <img src="../../static/img/fff.png" alt="">
+                        </div>
+                        <div class="des box">
+                            <b>商品名称商品名称商品名称商品名称商品名称商品名称</b>
+                            <p>规格：绿色／20ml 规格：绿色／20ml规格：绿色／20ml规格：绿色／20ml </p>
+                            <div class="price clearfix">
+                                <p>¥108  <i>库存不足</i></p>
+                                <span class="tright">x1</span>
+                            </div>
+                        </div>
+                        <div class="operating hide">
+                            <div class="choseNum">
+                                <span>-</span>
+                                <input type="text" value="1" />
+                                <span class="tright">+</span>
+                            </div>
+                            <div class="choseInfo">
+                                规格：绿色／30ml规格：绿色／20ml规格：绿色／20ml规格：绿色／20ml
+                            </div>
+                            <div class="del">
+                                <span class="icon-delete"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item justify">
+                    <label class="choseThis box">
+                        <input type="checkbox" name="checkbox"  />
+                    </label>
+                    <div class="orderListInfo box justify">
+                        <div class="img box">
+                            <img src="../../static/img/fff.png" alt="">
+                        </div>
+                        <div class="des hide box">
+                            <b>商品名称</b>
+                            <p>规格：绿色／20ml 规格：绿色／20ml规格：绿色／20ml规格：绿色／20ml </p>
+                            <div class="price clearfix">
+                                <p>¥108</p>
+                                <span class="tright">x1</span>
+                            </div>
+                        </div>
+                        <div class="operating box">
+                            <div class="choseNum">
+                                <span>-</span>
+                                <input type="text" value="1" />
+                                <span class="tright">+</span>
+                            </div>
+                            <div class="choseInfo">
+                                规格：绿色／30ml规格：绿色／20ml规格：绿色／20ml规格：绿色／20ml
+                            </div>
+                            <div class="del">
+                                <span class="icon-delete"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 失效商品 -->
+            <div class="listCart ed">
+                <div class="item justify">
+                    <div class="choseThis box">
+                        <em>失效</em>
+                    </div>
+                    <div class="orderListInfo box justify">
+                        <div class="img box">
+                            <img src="../../static/img/fff.png" alt="">
+                        </div>
+                        <div class="des box">
+                            <b>商品名称</b>
+                            <p>规格：绿色／20ml</p>
+                            <div class="price clearfix">
+                                <p>¥108</p>
+                                <span>x1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearFailure"> 清空失效商品 </div>
+        </div>
+        <!-- 购物车为空 -->
+        <div class="popNotCart hide">
+            <div class="content">
+                <img src="../../static/img/not_cart.png" alt="" />
+                <p>购物车快饿瘪了 T.T <br/> 快给我挑点宝贝</p>
+                <span>去逛逛</span>
+            </div>
+        </div>
+
+        <!-- 付款 购物车全选 -->
+        <div class="popChoose justify">
+            <div class="box choseThis">
+                <label>
+                    <input type="checkbox" name="checkbox"  /> <p>全选</p>
+                </label>
+            </div>
+            <div class="box total">
+                <p>合计：<b>¥182.00</b></p>
+                <span>不含运费</span>
+            </div>  
+            <div class="box">
+                <div class="sureBtn active">结算(2)</div>
+            </div>
+        </div>
+
+         <!-- 删除购物车 全选 -->
+        <div class="popChoose hide justify">
+            <div class="box choseThis">
+                <label>
+                    <input type="checkbox" name="checkbox"  /> <p>全选</p>
+                </label>
+            </div>
+            <div class="box rightBtn">
+                <div class="sureBtn active">删除(1)</div>
+            </div>
+        </div>
+
+        <div class="popBg hide"></div>
+        <div class="popShop hide">
+            <div class="close icon-close"></div>
+            <div class="top">
+                <div class="img">
+                    <img src="../../static/img/fff.png" alt="" />
+                </div>
+                <div class="info">
+                    <span class="flag">限时折扣</span>
+                    <span class="flag">10人拼团</span>
+                    <div class="price"><em>¥</em>10000.<em>54</em></div>
+                    <div class="txt">以选: 中号／红色</div>
+                </div>
+            </div>
+            <div class="chose">
+                <div class="title">尺寸</div>
+                <ul class="clearfix">
+                    <li>小</li>
+                    <li class="active">中</li>
+                    <li>大</li>
+                </ul>
+            </div>
+            <div class="chose">
+                <div class="title">颜色</div>
+                <ul class="clearfix">
+                    <li class="active">红色</li>
+                    <li>黄色</li>
+                    <li>黄色</li>
+                    <li>黄色</li>
+                    <li>黄色</li>
+                    <li>黄色</li>
+                    <li>黄色</li>
+                </ul>
+            </div>
+            <div class="number">
+                <div class="title">
+                     <p>数量</p>
+                     <span>(每人限购1件，超出按非活动价计算)</span>
+                </div>
+                <ul class="add clearfix">
+                    <li><span>-</span></li>
+                    <li><input type="text" value="1" /></li>
+                    <li><span>+</span></li>
+                </ul>
+                <div class="tip">库存仅剩10件</div>
+            </div>
+            <div class="btn">
+                <ul class="hide">
+                    <li><div class="noBgBtn">加入购物车</div></li>
+                    <li><div class="sureBtn ">立即购买</div></li> <!-- active -->
+                </ul>
+                <div class="sureBtn active only">确定</div>    <!-- active -->
+            </div>
+        </div>
+    
+        <!-- 删除商品提示 -->
+        <div class="popBg hide"></div>
+        <div class="popOr hide">
+            <div class="tip">确认要删除这个商品吗？</div>
+            <div class="clearfix">
+                <div class="fleft btn">取消</div>
+                <div class="fright btn">确认</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

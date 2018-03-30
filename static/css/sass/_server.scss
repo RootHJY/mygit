@@ -1,0 +1,140 @@
+@charset "utf-8";
+//客服
+.server{
+    .notice{ background-color:#FEEDE8; font-size: 13px; color: #474747; padding:7px 14px;
+        span{ @include ismiddle; }
+        p{ @include ismiddle; width:88%; @extend %textmore; line-height: 1; padding-left:4px;}
+    }
+    .defaulTip{ background-color: #fff; box-shadow: 0 0 10px 0 rgba(0,0,0,0.05); padding:10px 14px; margin:14px;
+        p{ font-size: 12px; color: #474747; margin-top: 20px;
+            &:first-child{ margin-top:0;}
+        }
+    }
+    .sendQus{ background-color: #fff; padding:10px 14px 20px 14px; border-radius:2px; margin:14px; position:relative; height:125px; 
+        label{ position:absolute; left:14px; top:14px; z-index: 1;
+            &.active{ z-index: -1}
+            p{ font-size: 12px;  color: #A5A4A4; margin-bottom: 12px;}
+        }
+        textarea{ width:100%; height:100%; max-width:100%; max-height:100%;  font-size: 12px; color: #474747; position:relative; background-color: #fff; padding-bottom: 10px; line-height: 1.5; border:1px solid #fff;}
+
+    }
+    .numTotal{ font-size: 12px; color:#a5a4a4; text-align: right; background-color: #fff; z-index: 2; line-height:1; 
+        span{ color: #FF5D31; }
+    }
+    .sendBtn{ text-align:right; padding-right: 14px;
+        span{  width:64px; height:28px; line-height:28px; display:inline-block;}
+    }
+    .fixBottom{ position:fixed; bottom:0;  width:100%; padding:30px 0 10px 0; background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, #FFFFFF 40%, #FFFFFF 100%);
+        .sureBtn{ width:200px; margin:auto;}
+        .addWechat{ position:absolute; right:15px; bottom:8px;  z-index: 2; text-align: center;; 
+            .icon-kefu{ width:26px; height:26px; line-height:26px; box-shadow: 0 0 3px 0 rgba(0,0,0,0.08); font-size:18px; color:#474747; border-radius:50%; background-color: #fff; display:inline-block; }
+            p{ font-size: 10px; color: #474747;}
+        }
+    }
+    .chatBox{ margin:14px; background-color: #fff; 
+        .list{ position:relative; text-align:right; padding:10px; border-top: 1px dashed #E1E1E1;
+            &:first-child{ border-top:0px none;
+               &:before,&:after{ display:none;} 
+            }
+            &:before,&:after{ content:''; position:absolute; width:5px; height:10px; background-color:#f7f7f7; display:block; top:-5px; overflow:hidden; z-index: 2;}
+            &:before{ left:0; border-radius:0 50px 50px 0;}
+            &:after{ right:0; border-radius:50px 0 0 50px; }
+        }
+        p{ color: #474747; height:40px; overflow: hidden; width:cal(289,347); display:inline-block; margin-bottom:4px;text-align:left;}
+        span{ position:absolute; left:14px; top:14px; color:$colorh; background-color:#fff; border: 1px solid #FF5D31; border-radius: 2px; font-size:10px; line-height:1; padding:2px 5px;}
+        em{ font-size: 10px; color: #A5A4A4; display:block;}
+        .answer{ position:relative; 
+            p{ @extend %fontPF; }
+            span{ background-color:$colorh; color:#fff;
+                &.ed:before{ content:''; width:5px; height:5px; background-color: $colorh; border: 1px solid #FFFFFF; box-shadow: 0 0 4px 0 rgba(0,0,0,0.15); position:absolute; right:-5px; top:-5px; border-radius:50%;}
+            }
+        }
+        &.details p{ height:auto; }
+    }
+    .botSendQus{  background-color: #fff; box-shadow: 0 -1px 0 0 rgba(238,238,238,0.50); position:fixed; left:0; bottom:0; z-index: 800; width:100%; padding:9px 14px;
+        input{ opacity: 0.88; background-color: #F8F8F8; border-radius: 100px; width:82%; line-height:36px; height:36px; padding-left:15px; border:0px none; font-size:14px; margin-right:10px;}
+        label{ color:$colorh; padding:6px;}
+    }
+}
+
+
+.refunds{ 
+    .normal{ padding:14px 0; margin:0 14px; border-bottom:1px solid #eee;
+        &:last-child{ border-bottom: 0px none;}
+    }
+    .mustM{ font-size: 14px; color: #FF5D31;
+        input{ font-size: 14px; color: #FF5D31;}
+    }
+    .fleft{ position:relative; }
+    span.requied{ width:4px; height:4px; background-color:$colorh; display:inline-block; border-radius:50%; position:absolute; top:8px; left:-7px; overflow:hidden;}
+    .refLeft{ margin-left: 14px;
+        input{ border:0px none; font-size: 14px; color: #474747;}
+        p{ font-size: 14px; color: #A5A4A4;}
+    }
+    .addImg{ margin-top: 10px;
+        .refundImg{ width:22.085%; height: 70px; display: inline-block; border: 1px dashed #e1e1e1; position:relative; background-size: cover;  @extend %trfast;
+            label{input{ font-size:0;}
+            &.active:after,&.active:before{ position:absolute; content:""; background-color:#e1e1e1; }
+            &.active:before{ width:60%; top:50%; height:2px; margin-top: -2px; left:20%;}
+            &.active:after{ height:60%; top:20%; left:50%; width:2px; margin-left: -2px;}
+            em{ position:absolute; height: 100%; width:100%; z-index: 2; left:0; top:0; color:#fff; background: rgba(0,0,0,0.30); text-align: center; font-size:12px; line-height:70px;}
+        }
+            span{ position:absolute; width:15px; height:15px; line-height:1.1; right:5px; top:5px; border-radius:50%; background:rgba(0,0,0,0.5); color:#fff; text-align: center; font-size:12px; cursor:pointer; font-weight: bold;
+                &:before{ font-size:12px; }
+            }
+        }
+    }
+    .tip{ font-size: 12px; color: #A5A4A4; padding:20px 14px 10px 14px; 
+        p{ margin-bottom: 5px; font-size: 12px;}
+        .sureBtn{ width:200px; margin:0 auto; margin-top:35px;}
+    }
+
+}
+
+//退款状态
+.resStatus{
+    .left{ font-size:16px; color:#000; vertical-align:middle;  max-width:185px;
+        b{ font-size: 16px; color: #000000;  @extend %fontPF;}
+        p{font-size: 14px; color: #A5A4A4; margin-top: 2px;}
+        span{ color:$colorh;}
+        .big{ @extend %fontPF; font-size:20px;}
+    }
+    .right{  
+        img{width:132px; }
+    }
+}
+
+
+.imgExp{ margin-top: 30px;
+    .tit{ font-size: 14px;  color: #A5A4A4; margin-bottom:6px;}
+    .box{ width:22%; float: left; margin-right: 2%;}
+}
+
+//物流历史记录
+.historyTwo{ padding:15px 14px;
+    li{ position:relative; padding:11px 25px; 
+        &:before{ content:''; width:6px; height:6px; background-color:#e1e1e1; border:2px solid #fff; position:absolute; border-radius:50%; left:0; top:16px; z-index: 3;
+        }
+        &:after{ content:''; width:0; height:100%; border-left:1px dashed #e1e1e1; position:absolute; left:5px; top:22px; z-index: 2;}
+        &.ed{ 
+            &:before{  background-color:$colorh;}
+            &:after{  border-left:1px solid $colorh; z-index: 4;}
+        }
+        &.active{ 
+            p{ color:$colorh; }
+            &:before{ background-color:$colorh;  border-color:#FFC9BB; z-index: 6;}
+        }
+        p{ font-size: 14px; color: #474747; @include ismiddle; width:68px;}
+        span{  font-size: 12px; color: #A5A4A4; @include ismiddle; }
+    }
+    li:last-child:after{ display:none;}
+}
+
+// 优惠券使用说明
+.couponRules{font-size:0px; border-radius:10px 10px 0 0; padding:14px;
+    li{  position:relative; margin-bottom:14px; padding-left:26px;}
+    span{font-size: 14px; color: #000000;font-weight:bold; position:absolute; left:0; top:0;
+        &:after{content:'';width:5px;height:2px;position:absolute;bottom:1px;left:10px; background-color:#000;}
+    }
+    p{ font-size: 14px; color: #474747; }
+}

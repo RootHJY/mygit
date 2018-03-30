@@ -1,0 +1,237 @@
+@charset "utf-8";
+.popBg{ @extend %pop; display:block;
+    &.than{ z-index: 1009!important;}
+}
+
+//提醒弹框
+.popMin{ width:240px; height:117px; background:rgba(0,0,0,0.75); border-radius:8px; position:fixed; left:0; right:0; top:0; bottom:0; margin:auto; text-align: center; z-index:9999!important;
+    .icon_imp{ color:#FF5D31; display:inline-block; margin-top:29px; margin-bottom:13px; font-size:30px;}
+    .txt{ color:#fff; padding:0 5px;}
+    &.big{ height:114px;}
+    @include screen(640px) { width:200px; height:94px; 
+        .icon_imp{ margin-top: 18px; margin-bottom:10px; font-size:16px;
+            &:before{ font-size:23px;}
+        }
+        .txt{ font-size:13px;}
+    }
+}
+
+//首页弹框
+.popRefunds{ height:390px; width:cal(270,375); background-image: linear-gradient(#FF5D31 0%, #ff6249 100%);
+border-radius: 8px; left:0; right:0; top:0; bottom:0; margin:auto; position:absolute; text-align: center; z-index: 1001!important;
+    .close{ text-align:right; padding:11px 14px 10px 0; color:#fff; font-size:12px;}
+    .logo{ background-color:#fff; width:44px; height:44px;  border-radius:50%; margin: auto;
+        img{  border-radius:50%;}
+    }
+    .tip{ font-size: 14px; color: #fff; @extend %fontPF; margin-top:18px;}
+    .info{ 
+        p{ font-size: 14px; color: #fff; padding: 35px 10px;}
+        ul{ margin-top: 20px; height:150px; overflow-y:scroll;-webkit-overflow-scrolling:touch;}
+        li{ font-size: 12px; color: #fff; margin-bottom:14px; padding:0 20px 0 50px; text-align: left; position:relative;
+            span{ position:absolute; color:#fff; @extend %fontPF; position:absolute; left:20px; top:0; font-size:14px;}
+        } 
+    }
+    .bottom{ position:absolute; bottom:40px; left:0; text-align: center; width:100%;
+        .btn{ background-color: #fff; border-radius: 100px; color:$colorh; font-size:14px; text-align: center; height:40px; line-height:40px; display:inline-block; width:132px; }
+        
+    }
+    .copyright{ position:absolute; bottom:14px; left:0; text-align: center; width:100%; font-size: 10px; color: #FFFFFF; }
+}
+
+//二维码弹框
+.popQr{ width:cal(204,375); height:300px; position:fixed; left:0; right:0; top:0; bottom:0; margin:auto; 
+    text-align: center; z-index: 1001!important;  
+    .tip{ font-size:14px; color:#fff; @extend %fontPF; margin-top:5px; margin-bottom:30px;}
+    .close{ font-size:18px; color:#fff;}
+}
+
+//二维码弹框
+.popDiscount{ width:cal(270,375); height:445px; position:fixed; left:0; right:0; top:0; bottom:0; margin:auto;
+    text-align: center;  z-index: 1010!important; 
+    .img{ border-radius:4px; overflow:hidden; font-size:0; }
+    .close{ font-size:17px; color:#fff; margin-top:40px; }
+}
+
+.popSearch{ position:fixed; z-index:1003; left:0; top:0; width:100%; height:100%;  background-color:#fff; margin-top:44px; padding:14px; overflow-y:scroll; padding-bottom: 50px;-webkit-overflow-scrolling:touch;
+    .title{ position:relative; margin-bottom: 14px;
+        p{ font-size: 12px; color: #000; @extend %fontPF;  }
+        span{ position:absolute; right:0; top:0; font-size: 12px; color: #A5A4A4; width:50px; text-align:right;}
+    }
+    li{ font-size: 14px; color: #474747; background: #F8F8F8; border-radius: 100px; padding:2px 8px; margin-bottom: 10px; margin-right:10px; display:inline-block;}
+}
+
+//选择商品弹框
+.popShop{  position:fixed; width:100%; bottom:0; left:0; background-color:#fff; padding:14px; padding-bottom:10px;  z-index: 1001!important;
+    .flag{ font-size: 10px; color: #fff; background-color:$color; line-height: 1; border-radius:2px; padding:0px 2px; margin-right:4px;}
+    .close{ padding:14px; position:absolute; right:0; top:0; color:#474747; font-size:12px;}
+    .top{ margin-top:-30px; margin-bottom: 20px;
+        .img{ width:cal(90,345); display:inline-block; vertical-align:bottom; border-radius: 4px; overflow: hidden; margin-right: 2%; background-color:#fff;}
+        .info{  display:inline-block; vertical-align:bottom; background-color: #fff; padding-left: 1px; @extend %fontPF; padding-bottom:5px; max-width:67%;
+            .price{ font-size: 20px; color: $colorh; 
+                em{ font-size: 12px; }
+                span{ font-size: 12px; color: #A5A4A4; margin-left:4px; text-decoration:line-through;}
+            }
+            .txt{ font-size: 12px; color: #474747; @extend %textmore; width:100%; padding-right:10px;}
+        }
+    }
+    .title{  margin-bottom:12px;
+        p{ display:inline-block; font-size: 14px; color: #474747; }
+        span{ display:inline-block; font-size: 10px; color: #474747;}
+    }
+    .chose{ margin-bottom: 10px;
+        li{ float: left; font-size: 12px; color: #474747; border-radius: 100px; padding:2px 19px;border:1px solid #c4c4c4; margin-bottom: 14px; margin-right: 10px; @extend %trfast;
+            &.active{ background-color: rgba(255,93,49,0.08); border:1px solid $colorh; color:$colorh;} 
+            &.blank{ background-color:#fff; border-color:#C4C4C4; color:#C4C4C4;} 
+        }
+    }
+    .chooseWrap{ max-height:233px; overflow-y:scroll; }
+    .number{ 
+        .title{
+            b{ font-size: 14px; color: #474747;}
+            p{ font-size: 10px; color: #474747;}
+        }
+        li{ float:left;}
+        ul{ @include ismiddle; }
+        input{ width:34px; height:22px; line-height: 1; color:$colorh; text-align: center; margin:0 10px; border:0px none; outline:none; font-size:14px; @extend %fontPF;}
+        .add{
+            span{ width:24px; height:24px; text-align: center; line-height:19.5px; color:$colorh; border-radius:50%; border:1px solid $colorh; display:inline-block; font-size:19px;}
+            span.blank{ border-color: #C4C4C4; color: #C4C4C4;}
+        }
+        .tip{  @include ismiddle; font-size:12px; color:$colorh; margin-left:18px;}
+    }
+    .btn{ margin-top:30px;
+        li{ float: left; width:50%;
+            div{ width:cal(144,174); margin:0 auto;}
+        }
+    }
+    .only{ width:cal(200,345); margin:0 auto; font-size:16px; }
+}
+
+.popChoose{ position:fixed; bottom:0; width:100%; left:0; ; background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, #fff 40%, #fff 100%); padding:40px 14px 10px 14px; z-index: 999!important;
+    &.hasFooter{ bottom:49px; }
+    .box{ width:38.4%; font-size: 12px; color: #474747; }
+    .choseThis{ width:17%; }
+    .total{ text-align:right; 
+        p{ font-size: 12px; color: $colorh;  @extend %fontPF; line-height: 1.2;}
+        b{ font-size: 16px; }
+        span{ font-size: 10px; color: #8C8888;}
+    }
+}
+
+// 空的购物车
+.popNotCart{ width:100%; height:100%; position:fixed; left:0; top:0;  background-color:#fff; text-align: center; z-index: 98!important;
+    .content{ position:absolute; width:160px; height:250px; left:0; right:0; top:0; bottom:0; margin:auto;}
+    p{ font-size: 12px; color: #9B9B9B;}
+    span{ border:1px solid $colorh; border-radius: 100px; font-size: 14px; width:80px; height:32px; display:inline-block; text-align:center; line-height:30px; color: $colorh; margin-top: 14px;
+        a{color: $colorh; font-size: 14px;}
+    }
+}
+
+.popOr{width:cal(270,375); height:112px; background-color:#f8f8f8; border-radius:4px; position:fixed; left:0; right:0; top:0; bottom:0; margin:auto; z-index: 1001!important;
+    &.big{ height:134px; 
+        .tip{ padding-top: 14px; }
+        .clearfix{  margin-top: 10px;}
+    }
+    .tip{ text-align:center; font-size: 16px; color: #353535;  @extend %fontPF; padding-top: 20px;}
+    .des{ font-size: 13px;  color: #353535; padding:0 32px; text-align: center;}
+    .btn{ color:#a5a4a4; text-align:center; font-size: 16px; color: #0076FF; @extend %fontPF; width:50%; height:44px; line-height:44px; }
+    .clearfix{  border-top:1px solid #C2C2C2;  margin-top:22px;}
+    .btn:first-child{ border-right:1px solid #c2c2c2;}
+}
+
+
+//登陆注册弹框
+.loginMain{ height:326px; width:cal(270,375); padding:40px 10px;  border-radius:4px; overflow: hidden;  background-color:#fff; left:0; right:0;  top:0; bottom:0; z-index:1010!important; position:fixed; margin:auto;
+    .loginTitle{ text-align: center; margin-top:30px;
+        img{ width:41.3%;}
+    }
+    ul{ width:100%; margin-top:20px; }
+    li{ margin-bottom:15px; position:relative;
+        .getCode{ right:20px; top:12px; color:#A5A4A4; z-index:811; cursor:pointer; position:absolute; line-height:1;
+            padding:5px 0; background-color:#F8F8F8; border:0px; outline:none; font-size:12px;}
+        .getCode.active{ color:#FF5D31;}
+        .clear{ padding:4px 2px; line-height: 1;
+            img{ width:13px;}
+        }
+        .clearTel{ right:87px; top:12px; position:absolute; }
+        .clearCode{ right:20px; top:12px; position:absolute;  }
+        .input{ font-size:14px; color:#000; line-height:1; background-color:#F8F8F8; border-radius: 100px; border:0px none; padding:15px 20px; width:100%; font-size:12px; } 
+        .loginButton{ background-color:#A5A4A4; color:#fff; width:cal(144,270); height:45px; line-height:45px;  text-align: center; margin:0 auto; font-size:16px;  border-radius: 100px; margin-top:33px;  @extend %fontPF; 
+            &.active{  background-image: linear-gradient(-135deg, #FF7E5A 0%, #FF5D31 100%); box-shadow: 0 2px 10px 0 rgba(255,93,49,0.45);}
+        }
+    }
+    @include screen(640px) { 
+        ul{ width:100%; margin-top: 20px;}
+    }
+    @include screen(375px) {  padding:10px;
+        ul{ padding:0px;}
+    }
+    @include screen(320px) { padding:5px 10px;
+        ul{ padding:0 5px;}
+    }
+}
+
+//客服弹框
+.popCustomer{ height:326px; width:cal(300,375); padding:40px 10px;  border-radius:4px; overflow: hidden;  background-color:#fff; left:0; right:0;  top:0; bottom:0; z-index:1001!important; position:fixed; margin:auto;
+    .tip{ color:#000; }
+    .img{ margin:20px 0;}
+    p{ color:#474747; }
+    .close{ position:absolute; right:0; top:0;}
+}
+.checkRefund{width: 16px; height: 16px; border: 1px solid #979797; border-radius: 50%; display: inline-block; vertical-align: middle; 
+    &.active{
+        border-color: #FF5D31; background: url(../../static/img/check.png) no-repeat center; background-size: 68% 68%;
+    }
+}
+//选择配送方式
+.popSendMethod{ position:fixed; z-index:1001!important; margin:auto; width:100%; bottom:0; left:0; right:0; background-color:#fff; 
+    .tip{  padding:15px 0; position:relative;border-bottom:1px solid #eee;
+        p{ font-size: 16px; color: #474747; @extend %fontPF; text-align: center; }
+        span{ position:absolute; right:14px; top:21px; color:#A5A4A4; }
+    }
+    .item{ padding:15px 0px; margin:0 14px; position:relative; 
+        &.noBorder{ border-top:0px none;}
+        .left{
+            img{ width:30px; display:inline-block; vertical-align: middle; }
+            b{ font-size: 14px; font-weight:normal; color: #474747; @include ismiddle; margin-left:8px;}
+            p{ font-size: 12px; color: #A5A4A4;}
+            span{ font-size:25px; @include ismiddle; }
+            .icon-icon_pay_wechat .path1:before{ color:#1AAD19; }
+            .icon-pay_alipay{ color:#108AE2;} 
+        }
+        .right{
+            span{ 
+                &:before{ color:$colorh; font-size:16px;}
+            }
+            .chose{ width:16px; height:16px; border: 1px solid #474747; background-color:#fff; display:inline-block; border-radius:50%;}
+            .icon-arrow:before{ color:#c2c2c2; font-size:12px;}
+            img{ width:30px; display:inline-block; vertical-align: middle; }
+        }
+    }
+    .blank{  margin-bottom: 70px;}
+    .closeBtn{ width:200px; margin:10px auto; }
+}
+
+//分享
+.popShare{ position:fixed;  z-index:1001!important; margin:auto; width:100%; top:0; right:0; text-align: right;
+    span{ font-size: 120px; @include ismiddle(text-bottom); padding-top:4px;
+        &:before{ color:#fff;}
+    }
+    .txt{ width:40%; @include ismiddle(text-top);  margin-right: -15px;
+        p{ color:#fff;}
+    }
+}
+
+.popAddCus{  position:fixed; z-index:1001!important; width:cal(270,375); height:344px; background-color:#fff; left:0; right:0; top:0; bottom:0; margin:auto; border-radius:8px;
+    .close{ text-align:right; padding-top: 6px; padding-right:8px;
+        span{ color:#c9c9c9; font-size:12px; }
+    }
+    b{ display:block; text-align:center; font-size:16px; color:#000; margin-bottom:8px;}
+    .img{ padding:0 20px;}
+    p{ font-size: 12px; color: #9B9B9B; text-align: center;}
+}
+
+//组团分享
+.popGroupShare{ position:fixed; z-index: 1001!important; width:270px; height:445px; left:0; right:0; top:0; bottom:0; margin:auto;
+    .close{ position:absolute; right:0; height:0; padding:10px; font-size:12px; height:30px;}
+}

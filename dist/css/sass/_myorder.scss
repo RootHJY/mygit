@@ -1,0 +1,451 @@
+@charset "utf-8";
+//个人中心*订单
+
+.myCoupon{ padding:15px; 
+    .more{ text-align: center; font-size: 12px; color: #A5A4A4; padding:13px 0;}
+    .tip{ margin-top: 20px;
+        .box{ font-size: 12px; color: #A5A4A4;} 
+    }
+}
+
+.queryStauts{
+    text-align: center; color: #a5a4a4; font-size: 12px;
+}
+
+//订单 个人中心 白底
+.myWhiteBg{ margin:15px 15px 0 15px; background-color:#fff; border-radius:4px 4px 0 0; position:relative; z-index: 20;
+    > div{ position:relative; border-bottom: 1px dashed rgba(0,0,0,0.06); 
+        &:before,&:after{ content:''; position:absolute; width:5px; height:10px; background-color:#f7f7f7; display:block; bottom:-5px; overflow:hidden; z-index: 2;}
+        &:before{ left:0; border-radius:0 50px 50px 0;}
+        &:after{ right:0; border-radius:50px 0 0 50px; }
+    }
+    > div:last-child{ border-bottom: 0px none; 
+         &:before,&:after{ display:none;}
+    }
+    
+    //正常的一行左右布局
+    .normal{ padding:14px; background-color:#fff; position:relative;
+        &.min{ padding:11px 14px;}
+        .pLeft{ width:93%;
+            .active{ color:$colorh; font-size:14px;}
+            .gray{ font-size: 12px; color: #A5A4A4; margin-top:3px;}
+        }
+        .pRight{
+            span{ font-size:12px; color:#C7C7C7; }
+        }
+        .fleft{  font-size: 14px; color: #474747; }
+        .fright{ font-size: 14px; color: #474747;
+            p{ @include ismiddle;
+                &.active{ color:$colorh;}
+            }
+            .gray{  color: #A5A4A4;  }
+            span{ @include ismiddle; color:#C2C2C2; font-size:12px; margin-left:5px;}
+        }
+        &.textarea{ position:relative;
+            .fleft{ width:19%;}
+            .fright{ width:79.5%; position:relative; }
+            label{ position:absolute; left:0; top:0; font-size: 14px; color:#A5A4A4;}
+            textarea{ width:100%; height:63px; max-height:63px; min-width:100%; min-height:63px; max-width:100%; font-size: 14px; color:#474747; padding-left:4px; border:0px none; outline:none;}
+        }
+        > p{ font-size:12px; color: #474747;}
+        > p.gray{ font-size: 14px; color: #A5A4A4; margin-bottom:4px;}
+    }
+    .payment{ text-align: center;
+        img{ width:43%; }
+        p{ @extend %fontPF; margin-top:5px; font-size:16px; color:#000; }
+        span{ font-size: 12px; color: #A5A4A4; @extend %fontPFL;}
+        .price{ font-size:18px; color:$colorh; @extend %fontPF;}
+    }
+    .leftRight{ padding-top: 5px;
+        &.bigli{ padding-top: 10px;
+            li{ margin-bottom: 14px;}
+        }
+        li{ margin-bottom:7px; color: #474747;}
+        .light{ @extend %fontPF; }
+    }
+    .leftLeft{
+        li{ margin-bottom:6px;
+            b{ font-weight:normal; font-size: 14px; color: #A5A4A4; @include ismiddle(top); width:19%;}
+            p{ font-size: 14px; color: #A5A4A4; @include ismiddle(top); width:76.5%;}
+
+        }
+    }
+    .notice{ background:rgba(255,93,49,0.05);; padding:8px 14px; text-align:center; border-bottom:0px none;
+        span,p{ @include ismiddle; }
+        p{ font-size: 13px; color: #474747; }
+        &:before,&:after{ display:none; }
+    }
+    .noBgBtn{ width:cal(90,375); display:inline-block; margin-left:10px; }
+    .statuS{ 
+        .left{ width:68%; 
+            li{ font-size: 12px; color: #A5A4A4;}
+        }
+        .btn{ text-align: center; width:96px; box-shadow: 0 0 5px 0 rgba(0,0,0,0.08); border-radius: 100px; height:30px; line-height:30px;
+            span{ @include ismiddle; font-size: 16px;color: #474747;}
+            p{ @include ismiddle; font-size:14px;color: #474747; margin-left: 2px;}
+        }
+    }   
+}
+
+
+.logistics{ margin:15px; background-color:#fff;  
+    .top{ position:relative; border-bottom:1px dashed rgba(0,0,0,0.06); 
+        p{ font-size:12px; color: #474747; padding:11px 14px;}
+        &:before,&:after{ content:''; position:absolute; width:5px; height:10px; background-color:#f7f7f7; display:block; bottom:-5px; overflow:hidden; z-index: 2;}
+        &:before{ left:0; border-radius:0 50px 50px 0;}
+        &:after{ right:0; border-radius:50px 0 0 50px; }
+    }
+    .info{ padding:15px 14px; position:relative; border-bottom:1px dashed rgba(0,0,0,0.06); 
+        &:before,&:after{ content:''; position:absolute; width:5px; height:10px; background-color:#f7f7f7; display:block; bottom:-5px; overflow:hidden; z-index: 2;}
+        &:before{ left:0; border-radius:0 50px 50px 0;}
+        &:after{ right:0; border-radius:50px 0 0 50px; }
+        p{  font-size: 12px; color: #A5A4A4; }
+    }
+    .imgList{ height:60px; overflow-y:hidden; overflow-x:scroll; margin-bottom:8px; word-break:keep-all;  white-space:nowrap;  -webkit-overflow-scrolling:touch;
+        .item{ width:60px; display:inline-block; margin-right: 5px;}
+    }
+}   
+
+
+//物流历史记录
+.history{ padding:15px 14px;
+    ul{padding-left:17px; position:relative;
+        &:before{ content:''; height:100%; width:2; border-left:1px dashed rgba(0,0,0,0.06); position:absolute; left:-1px; top:8px;}
+    }
+    li{ margin-bottom:21px; position:relative;
+        &:before{ content:''; background-color:#E1E1E1;  width:7px; height:7px; position:absolute; 
+            left:-23px; top:3px; display:block; border-radius:50%; border:2px solid #fff;
+        }
+        p{ font-size: 14px; color: #474747; line-height:1.3; margin-bottom: 4px;}
+        span{  font-size: 12px; color: #A5A4A4;}
+        &.active{ 
+            p{ color:$colorh;}
+            &:before{ background-color:$colorh; border:2px solid #FFC9BB;}
+        }
+    }
+    .toggle{ text-align: center;
+        span{ display:inline-block; color:#C2C2C2; }
+        .up{  transform:rotate(-90deg);  -webkit-transform:rotate(-90deg);  }
+        .down{  transform:rotate(90deg);  -webkit-transform:rotate(90deg);  }
+    }
+}
+
+
+//拼团
+.groupInfo{
+    .img{ width:cal(90,317); border-radius:50%; overflow:hidden; }
+    .info{ width:cal(210,317); 
+        > p{ font-size: 14px; color: #000000;}
+    }
+    .price{ color:$colorh; font-size: 14px; @extend %fontPF; margin-top:5px; margin-bottom:2px;
+        em{font-size: 10px; line-height:1; color: #FFFFFF; border-radius:1px; background-color:$colorh; padding:1px 2px;  @include ismiddle;}
+    }
+    .gray{ font-size: 10px; color: #A5A4A4; 
+        span{ text-decoration:line-through;}
+    }
+}
+
+
+//加入团购
+.joinGroup{
+    .tip{ margin-bottom:10px;
+        .left{ font-size: 14px; color: #000000;
+            span{ color:$colorh;}
+        }
+        .right{ font-size: 12px; color: #A5A4A4;}
+    }
+    ul{ margin-left: -12px; @extend %trslow; 
+        &.min{ height:36px; overflow:hidden;} 
+    }
+    li{ float:left; width:35px; height:35px; margin-left: 12px; margin-bottom:12px; position:relative;
+        img{ border-radius:50%; width:100%; height:100%; }
+        span{ background-color:$colorh; font-size:8px; color:#fff; position:absolute; z-index: 2; border-radius:30px; line-height: 1; display:inline-block; white-space:nowrap; padding:2px 3px; bottom:-2px; left:3px;}
+    }
+    .toggle{ text-align: center; padding:10px 0; 
+        p{ color: #A5A4A4; font-size:12px; position:relative;  display:inline-block; }
+        .all:after{ content:''; width:0; height:0; border-top:3px solid #c9c9c9; border-left:3px solid transparent;  border-right:3px solid transparent; @include ismiddle; margin-left:6px; }
+        .up:after{ content:''; width:0; height:0; border-bottom:3px solid #c9c9c9; border-left:3px solid transparent;  border-right:3px solid transparent; @include ismiddle; margin-left:6px;}
+    }
+}
+
+
+//订单分享
+.shareOrderTop{ text-align: center; padding-top:23px;
+    img{ width:75px; margin-bottom:4px;}
+    p{ font-size: 14px; color: #A5A4A4;}
+}
+
+//订单分享
+.shareOrder{ height:100%;
+    .mint-swipe{ height:395px!important;}
+    .img{ padding:30px 20px; }
+    .title{ padding-top: 10px; @extend %textmore; color:#000; }
+    .price{ color:$colorh; font-size: 18px; @extend %fontPF; padding-top: 5px;}
+    .toShop{ text-align: center; border-top: 1px dashed #DEDEDE; position:relative;
+        &:before,&:after{ content:''; position:absolute; width:5px; height:10px; background-color:#f7f7f7; display:block; top:-5px; overflow:hidden; z-index: 2;}
+        &:before{ left:0; border-radius:0 50px 50px 0;}
+        &:after{ right:0; border-radius:50px 0 0 50px; }
+        p{ font-size: 12px; color: #474747; margin-bottom:10px; padding-top: 3px;}
+        .sureBtn{ width:200px; margin:auto; font-size:16px;}
+    }
+    .num{ font-size: 10px; color: #A5A4A4; text-align: right; position:absolute; right:14px; top:8px;
+        span{ font-size: 16px; @extend %fontPF; color:#474747;}
+    }
+}
+
+
+//底部fix 按钮两个
+.botBtn{ position:fixed; bottom:0; left:14px; right:14px; margin:auto; padding:10px 23px; z-index: 222; 
+    .box{ width:47.4%; } 
+    &.only{ 
+        .sureBtn{ width:200px; margin:0 auto;}
+    }
+    .min{display:inline-block;width:150px;}
+    .help{ font-size: 12px; color: #7F7F7F; @extend %fontPF; display:block; margin-bottom:15px; text-align: center;
+        p,span{ @include ismiddle; }
+        span{ font-size:12px;}
+    }
+}
+
+
+.totalPrice{ position:fixed; bottom:0; left:14px; right:14px; margin:auto; background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, #FFFFFF 40%, #FFFFFF 100%); padding:30px 14px 10px 14px; z-index:99;
+    .left{ font-size: 12px;  color: #474747;
+        span{ color:$colorh; font-size: 16px; @extend %fontPF; margin-left:5px;}
+    }
+    .right{ width:cal(144,340);}
+    .only{ width:200px; margin:0 auto;}
+}
+
+//个人中心
+.myList{ 
+    .cntop{ padding:30px 18px; background:url(../img/bg_min.png) no-repeat center; 
+        .avar{  width:50px; height:50px; border: 3px solid rgba(234,234,234,0.40); @include ismiddle; border-radius: 50%; overflow:hidden; margin-right:10px;
+            img{ width:100%; height:100%; }
+         }
+        .name{  color:#fff; font-size:16px; @include ismiddle; @extend %fontPF;}
+    }
+    .cnList{ padding-left:15px;
+        li{ border-top:1px solid #eee; padding:16px 6px 16px 0; 
+            &:first-child{ border-top:0px none;}
+            > p{ font-size:14px; color:#474747;}
+            > span{ font-size:12px; color:#c7c7c7; }
+            .dot{ width:5px; height:5px; border-radius:50%; background-color:$colorh; display:inline-block; vertical-align: middle; margin-left:7px;}
+        }
+    }
+    .cnItem{ width:18%; position:relative; text-align: center;
+        span{ font-size:24px!important;}
+        p{ font-size:12px; color:#474747; margin-top:10px;}
+        i{ font-style:normal; min-width:13px; padding:0 1px; height:13px; line-height:13px; font-size:10px; background-color:$colorh; color:#fff; position:absolute; top:-4px; right:13px; border-radius:50%; }
+    }
+}
+
+
+//优惠券列表
+.couList{ margin-bottom:15px; background-color:#fff; box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08); border-radius: 4px; position:relative;
+    .icon-choosecoupon{ position:absolute; right:0; top:0; font-size:20px; 
+        .path1:before{ color:$colorh;}
+    }
+    &.noShadow{ box-shadow:0 0 0;
+        .bottom{ padding-bottom:17px; border-top:0px none;}
+    }
+    .top{ padding:11px 14px 8px 14px; }
+    .des{ vertical-align: top; max-width:70%;
+        b{ font-size:14px; color:#616161; @extend %fontPF; @extend %textmore;}
+        p{ font-size:10px; color:#a5a4a4; margin-top:6px; }
+    }
+    .money{ vertical-align: top;
+        span{ font-size:10px; color:#a5a4a4; @include ismiddle(baseline); padding-right:4px;}
+        p{ font-size:32px; color:#a5a4a4; @extend %fontPF; line-height: 1.2; @include ismiddle(baseline);}
+    }
+    &.active{ 
+        .money{
+            p,span{ color:$colorh; }
+        }
+        .status{color:$colorh; 
+            p{ color:$colorh; border-color:$colorh;}
+        }
+    }
+    .bottom{ border-top:1px dashed #e2e2e2; padding:7px 14px; }
+    .time{ font-size:10px; color:#a5a4a4; width:76%; line-height:1.7; }
+    .status{ font-size:10px; color:#a5a4a4; vertical-align: top;
+        p{ border:1px solid #A5A4A4; color:#A5A4A4; border-radius:100px; width:54px; text-align: center; font-size:10px; @extend %fontPF;}
+    }
+    .tip{ font-size: 10px; color: #FF5D31; line-height: 1; padding-left:14px; padding-bottom:10px; margin-top: -3px;}
+}
+
+//优惠券富文本
+.richTxt{ 
+    padding:14px;
+}
+
+//添加地址按钮
+.addAdd{ padding:17px 14px;
+    span{ font-size:10px; margin-right: 10px; font-weight:bold; } 
+    a{ font-size: 14px; color: #474747;}
+}
+
+//收获地址列表
+.addList{ padding:20px 14px 17px 14px;
+    .top{ color:#474747; font-size:14px; line-height: 1;
+        span{ border-radius:1px; line-height:1; padding:1px 5px; color:$colorh; border:1px solid $colorh; font-size:10px; @include ismiddle; margin-right:2px;}
+        p{  @include ismiddle; color:#474747; font-style:14px; text-align:left; }
+        .name{ width:65%;
+            p{ -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; display: -webkit-box!important; padding-left: 0%; width: 100%!important; line-height: 21px;}
+        }
+    }
+    .info{  color:#474747; font-size:14px; position:relative;
+        p{ @include ismiddle(top); font-size:14px; color: #474747; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; display: -webkit-box; width:90%; }
+        span{ @include ismiddle(top); color: #C2C2C2; font-size: 12px; margin-left: 5px;}
+        .absoluteIcon{ position:absolute; top:5px; right:0px;}
+    }
+    .bottom{ margin-top:18px;
+        .left{
+            p{ font-size: 12px; color: #474747;  @include ismiddle; margin-left: 4px;}
+        }
+        .right{
+            span,a{ margin-left: 20px; display:inline-block; width:16px; height:16px;
+                &:before{ font-size:16px; color:#616161;}
+            }
+        }
+    }
+}
+
+//修改手机号码
+.changeTel{ 
+    .top{ color: #4A4A4A;  padding:14px; 
+        .box{ font-size: 14px; }
+        p{ font-size: 14px; color:#A5A4A4; @include ismiddle; margin-right:4px;}
+        span{ font-size:12px; color:#A5A4A4; @include ismiddle;}
+    }
+    .tip{ padding:18px 14px; border-top:5px solid #f8f8f8; font-size: 14px; color: #4A4A4A;}
+}
+
+//修改地址
+.changeAdd{
+    .setAdd{ 
+        li{ position:relative; border-bottom: 1px solid #EEEEEE;
+            input{ height:54px; line-height: 1;  border:0px none;  background-color: #fff; width:100%;font-size: 14px; color: #000;}
+            textarea{ width:100%; background-color:#fff; height:100px; max-width:100%; max-height:100px; padding-top: 18px; font-size: 14px; color: #000; border:1px solid #fff;}
+            label{ position: absolute; top:18px; left:0; font-size: 14px; @extend %textmore; width:90%;}
+        }
+        .num{ position:absolute; right:0; bottom:0; font-size: 12px; color: #A5A4A4;}
+        .icon-position{ position:absolute; right:-15px; top:0px; font-size:18px; padding:13px; z-index:111; background-color: #fff;}
+    }
+    .set{ padding-top:20px;
+        span{ @include ismiddle; 
+            &:before{ color:$colorh; font-size:16px; }
+        }
+        .circle{  width:16px; height:16px; border-radius:50%; border:1px solid #474747;  @include ismiddle; margin-right: 5px;}
+        p{ @include ismiddle;  color: #616161; font-size:14px; }
+    }
+}
+
+.saveAddBtn{ position: fixed; z-index: 80; margin:auto; left:0; right:0; bottom:10px; width:cal(200,375);}
+
+//不使用优惠券
+.notUse{ 
+    background-color:#fff; font-size: 14px; color: #474747; height:42px; line-height: 42px; position:fixed; z-index: 100; bottom:0; width:100%; left:0; text-align: center;
+}
+
+
+//订单筛选
+.orderFilter{ background-color: #fff; position:relative; z-index:99;margin-bottom: 14px;
+    li{ float: left; width:20%; height:40px; line-height: 40px; text-align: center; position:relative; font-size: 12px; color: #474747;
+    }
+    li.active{ color:$colorh;
+        &:after{ content:''; width:24px; height:2px; background-color:$colorh; position:absolute; bottom:0; left:0; right:0; margin:auto;}
+    }
+}
+
+//订单列表
+.orderList{ padding:0 14px 14px; }
+
+.orderItem{position:relative; background-color: #fff; }
+
+.orderListTop{ border-bottom:1px dashed rgba(0,0,0,0.06); position:relative; padding:7px 14px;
+    .orderNum{ color:#a5a4a4; float:left; font-size:12px;}
+    .orderStatu{ color:#333; float:right; font-size:12px; color:$colorh;}
+    &:before,&:after{ content:''; position:absolute; width:5px; height:10px; background-color:#f7f7f7; display:block; bottom:-5px; overflow:hidden; z-index: 2;}
+    &:before{ left:0; border-radius:0 50px 50px 0;}
+    &:after{ right:0; border-radius:50px 0 0 50px; }
+}
+
+.orderListbottom{ border-top:1px dashed rgba(0,0,0,0.06); position:relative; padding:9px 14px;
+    .total{ font-size:16px; @extend %fontPF;color:#474747;
+        span{ font-size: 12px; color: #474747;}
+    }
+    .leftStatus{ 
+        span{ font-size: 14px; color:$colorh; @include ismiddle; margin-right:6px;}
+        p{ font-size: 14px; color: #474747; @include ismiddle; }
+        a{ font-size: 14px; color: #474747; }
+    }
+    .btnStatu{ font-size: 14px; padding:4px 18px; border-radius:30px; background-image: linear-gradient(-135deg, #FF7E5A 0%, #FF5D31 100%); box-shadow: 0 2px 5px 0 rgba(255,93,49,0.45);color:#fff;}
+    .nobgBtn{ font-size: 14px; color: #474747; background: #FFFFFF; box-shadow: 0 0 5px 0 rgba(0,0,0,0.08); border-radius: 100px; padding:4px 18px; display:inline-block; vertical-align: middle; margin-left: 14px;
+        a{font-size: 14px; color: #474747;}
+    }
+    &:before,&:after{ content:''; position:absolute; width:5px; height:10px; background-color:#f7f7f7; display:block; top:-5px; overflow:hidden; z-index: 2;}
+    &:before{ left:0; border-radius:0 50px 50px 0;}
+    &:after{ right:0; border-radius:50px 0 0 50px; }
+}
+
+.orderListInfo{ margin:10px 0; position:relative; padding:10px 14px;
+    .img{ width:28%; }
+    .des{ width:67.5%; padding-top:2px;
+        &.min b{ padding-right: 20px;}
+        > b{ font-size: 14px; color: #474747; font-weight:normal; margin-bottom:4px; position:relative; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; display: -webkit-box;
+            i{ font-style:normal; font-size:10px; color: #FF5D31; border:1px solid $colorh; border-radius:1px;  padding:1px 3px; line-height: 1;  @extend %fontPFL;  @include ismiddle; margin-right:4px; margin-top:-3px;}
+            span{ font-size: 12px; color: #A5A4A4; position:absolute; right:0; bottom:1px;}
+        }
+        > p{ font-size: 10px; color: #A5A4A4; line-height: 1.2; @extend %textmore; position:relative;
+            span{ position:absolute; right:0; font-size:12px;}
+        }
+        .backM{ text-align: right;  color:$colorh; font-size: 14px; display:block; text-align:right; margin-top:5px;}
+    }
+    .price{ font-size:14px; color:#000; margin-top: 10px; line-height: 1;
+        p{ float: left; font-size: 14px; color: #474747; @extend %fontPF; @include ismiddle; margin-right:4px;}
+        i{ font-style:normal; font-size:10px; color: #FF5D31; @extend %fontPFL;line-height: 1;  @include ismiddle; margin-top:-3px;}
+        span{ float: right; color:#474747; font-size:12px; }
+    }
+    .resNum{ position:absolute; right:0; top:10%;}
+    .resPrice{ position:absolute; bottom:0; right:0;}
+}
+
+
+
+//订单详情页
+.orderDetails{
+    .topTip{ text-align:center; background-color: #ddd; padding:10px;}
+    .cancelBtn{ text-align: right;
+        span{ }
+    }
+    .orderTime{ 
+        p{ color:#a5a4a4;}
+    }
+    .address{ 
+        p{ color:#a5a4a4;}
+    }
+}
+
+//领取会员卡
+.member{
+    .memberImg{position:relative;text-align:center;
+        img{width:100%;}
+        span{font-size: 16px; color: #FF5D31;background: #FFFFFF; box-shadow: 0 2px 10px 0 rgba(255,93,49,0.45); border-radius: 100px;padding:10px 40px;display: inline-block; text-align: center;position:absolute;bottom:50px;left:0px;right:0px;width:144px;margin:0 auto;}
+        a{color:#FF5D31;}
+    }
+    .mainBox{margin-top: 25px;text-align: center;padding:0 14px;font-size:0px;
+        .title{text-align: center; display: inline-block; margin-bottom: 14px; position: relative;font-size: 16px; color: #FF5D31; line-height: 24px;
+            &:after{content:'';width:15px;height:3px;position:absolute;right:-33px;top:11px;background-color:#ffcd00;}
+            &:before{content:'';width:15px;height:3px;position:absolute;left:-33px;top:11px;background-color:#ffcd00;}
+        }
+        .info span{display:block; font-size: 14px; color: #474747; line-height: 24px;text-align:left;}
+    }
+    .copyright{text-align:center;padding-top:50px;font-size:0px;
+        img{width:80px;}
+        p{font-size: 10px; color: #A5A4A4; letter-spacing: 11px; line-height: 24px;padding:20px 0;}
+    }
+}
+
+
+
+
