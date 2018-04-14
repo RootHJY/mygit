@@ -208,7 +208,7 @@
 </template>
 
 <script>
-    import common from '@/components/common'
+    import common from '@/components/common.js'
     import popMin from '@/components/popMin'
     import login from '@/components/login'
     import swipe from '@/components/swipeShop'
@@ -220,6 +220,7 @@
     import groupGame from '../group/groupGame'
     import packageList from '../package/packageList'
     import remmendLay from './remmendLay'
+
     export default {
         data () {
             return {
@@ -270,7 +271,6 @@
             remmendLay,
         },
         created () {
-
             this.$store.state.cartNum = localStorage.getItem('cartNum') //获取购物车数量
             this.getUrlId() //获取商品ID
 

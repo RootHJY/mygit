@@ -70,7 +70,7 @@ Vue.use(Router)
 
 export default new Router({
 	mode: 'hash',
-	// base: '/daydaycook/page/shop/',
+	// base: '/daydaycook/page/shop/',#index
 	routes: [
 		{
 			path: '/',
@@ -138,7 +138,7 @@ export default new Router({
 			component: member
 		},
 		{
-			path: '/center',
+			path: '/center',  
 			component: center,
 			children: [
 				{

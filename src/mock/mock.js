@@ -6,7 +6,7 @@ Mock.mock('/api/groupList', (req, res) => {
 	}
 })
 
-Mock.mock('//cart/delete.do', (req, res) => {
+Mock.mock('/cart/delete.do', (req, res) => {
 	return {
 		"code":"200"
 	}

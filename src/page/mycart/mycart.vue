@@ -141,12 +141,12 @@
 </template>
 
 <script>
-    import popMin from '@/components/popMin'
-    import common from '@/components/common'
-    import VTitle from '@/components/title'
-    import login from '@/components/login'
-    import footerLay from '@/components/footer'
-    import editInfo from './editInfo'
+    import popMin from '@/components/popMin.js'
+    import common from '@/components/common.js'
+    import VTitle from '@/components/title.vue'
+    import login from '@/components/login.vue'
+    import footerLay from '@/components/footer.vue'
+    import editInfo from './editInfo.vue'
     export default {
         data () {
             return {

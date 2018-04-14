@@ -1,27 +1,25 @@
 import Vue from 'vue'
 import _axios from 'axios'
-Vue.prototype.ajaxDataFun = function(method,url,callSuccess){
-    _axios({
-        method:method,
-        url:url,
-    }).then(function (obj) {
-        callSuccess(obj.data)
-    }).catch(function (error) {
-        console.log(error)
-    });
-}
+// Vue.prototype.ajaxDataFun = function(method,url,callSuccess){
+//     _axios({
+//         method:method,
+//         url:url,
+//     }).then(function (obj) {
+//         callSuccess(obj.data)
+//     }).catch(function (error) {
+//         console.log(error)
+//     });
+// }
 
-/*
 import store from '../store/index'
 import CryptoJS from 'crypto-js'
 import Fingerprint from'fingerprintjs'
 import _hex_md5 from'md5'
 import _crypto from'crypto'
 import jsencrypt from'jsencrypt'
-import Common from './common
-*/
+import Common from './common'
 
-/*var domainAdd = window.location.protocol + "//" + window.location.host  + "/";
+var domainAdd = window.location.protocol + "//" + window.location.host  + "/";
 
 if(domainAdd.indexOf('localhost') > -1 || domainAdd.indexOf('192.168.') > -1 || domainAdd.indexOf('testwxecom') > -1){
     domainAdd = "http://test.daydaycook.com.cn/";
@@ -262,6 +260,6 @@ acctoken = Common.getCookie("acctoken");
 
 if(!randomKey || !acctoken || randomKey == 'underfine' || acctoken == 'underfine') {
     getPubFunction();
-}*/
+}
 
 

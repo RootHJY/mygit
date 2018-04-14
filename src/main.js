@@ -114,7 +114,7 @@ new Vue({
 	template: '<App/>',
 	components: { App },
 	created () {
-		// this.weChatLogin()  //微信登录 函数内判断s
+		// this.weChatLogin()  //微信登录 函数内判断
 	    // this.hotTxtInit()  //随机搜素热词
 		this.getMcartNum()  //刷新页面的时候重新获取 
     },
