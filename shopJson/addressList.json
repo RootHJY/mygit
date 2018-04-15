@@ -21,6 +21,16 @@
       "phone": "18701872617",
       "zipCode": "",
       "area": 410602
+    },
+    {
+      "id": 9792,
+      "address": "123",
+      "areaName": "河南省/鹤壁市/鹤山区",
+      "consignee": "test",
+      "isDefault": false,
+      "phone": "18701872617",
+      "zipCode": "",
+      "area": 410602
     }
   ]
 }
